@@ -1,0 +1,5 @@
+require("config.autocmds")
+require("config.options")
+require("config.keymap")
+require("config.lazy")
+require("roblox")
