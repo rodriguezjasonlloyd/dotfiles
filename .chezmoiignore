@@ -1,0 +1,6 @@
+LICENSE
+README.md
+nvim/
+{{ if ne .chezmoi.os "linux" -}}
+.zshrc
+{{- end }}
