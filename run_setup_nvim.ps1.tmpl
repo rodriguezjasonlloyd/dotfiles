@@ -1,0 +1,7 @@
+{{- if eq .chezmoi.os "windows" -}}
+$destination = "$env:LOCALAPPDATA\nvim"
+if (Test-Path $destination) {
+    Remove-Item -Recurse -Force $destination
+}
+Copy-Item -Recurse '{{ .chezmoi.sourceDir }}\nvim' $destination
+{{- end }}
