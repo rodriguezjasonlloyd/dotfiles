@@ -1,5 +1,4 @@
-format = """
-[ ](bg:#a3aed2 fg:#a3aed2)\
+format = """[ ](bg:#a3aed2 fg:#a3aed2)\
 $os\
 [ ](bg:#a3aed2 fg:#a3aed2)\
 [](bg:#769ff0 fg:#a3aed2)\
