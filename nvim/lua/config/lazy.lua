@@ -1,30 +1,43 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+local get_descendants = require("utility.get_descendants")
 
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-    local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-    if vim.v.shell_error ~= 0 then
-        vim.api.nvim_echo({
-            { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
-            { "\nPress any key to exit..." },
-        }, true, {})
-        vim.fn.getchar()
+local data_directory = vim.fn.stdpath("data")
+local lazy_path = vim.fs.joinpath(data_directory, "lazy", "lazy.nvim")
+
+if not vim.uv.fs_stat(lazy_path) then
+    vim.notify("Cloning lazy.nvim into " .. lazy_path, vim.log.levels.INFO)
+
+    local ok, output = pcall(vim.fn.system, {
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--branch=stable",
+        "https://github.com/folke/lazy.nvim.git",
+        lazy_path,
+    })
+    if not ok or vim.fn.getenv("SHELL_ERROR") ~= "0" then
+        vim.notify("Failed to clone lazy.nvim:\n" .. (output or ""), vim.log.levels.ERROR)
         os.exit(1)
     end
 end
 
-vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(lazy_path)
+
+local plugin_root = vim.fs.joinpath(vim.fn.stdpath("config"), "lua", "plugins")
+local plugin_specs = get_descendants(plugin_root)
+
+for i, module in ipairs(plugin_specs) do
+    plugin_specs[i] = { import = module }
+end
 
 require("lazy").setup({
-    spec = {
-        { import = "plugins" },
-    },
+    spec = plugin_specs,
     defaults = {
         lazy = false,
         version = false,
     },
-    install = { colorscheme = { "tokyonight" } },
+    install = {
+        colorscheme = { "tokyonight" },
+    },
     performance = {
         rtp = {
             disabled_plugins = {

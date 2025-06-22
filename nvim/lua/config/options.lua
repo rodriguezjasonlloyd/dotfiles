@@ -35,6 +35,7 @@ opt.number = true
 opt.relativenumber = true
 opt.ruler = false
 opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+opt.fileformat = "unix"
 
 -- Indentation and Tab Settings
 opt.shiftwidth = 4
@@ -46,7 +47,6 @@ opt.shiftround = true
 opt.grepformat = "%f:%l:%c:%m"
 opt.grepprg = "rg --vimgrep"
 opt.ignorecase = true
-opt.smartcase = true
 
 -- Command and Jump Options
 opt.inccommand = "nosplit"

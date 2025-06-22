@@ -1,11 +1,11 @@
 return {
     "stevearc/oil.nvim",
-    cond = true,
     dependencies = { "nvim-tree/nvim-web-devicons" },
-    lazy = false,
-    opts = {},
+    event = { "VeryLazy" },
     config = function()
-        require("oil").setup({
+        local oil = require("oil")
+
+        oil.setup({
             skip_confirm_for_simple_edits = true,
             constrain_cursor = "name",
             float = {
@@ -14,6 +14,6 @@ return {
             },
         })
 
-        vim.keymap.set("n", "\\", require("oil").toggle_float)
+        vim.keymap.set("n", "\\", oil.toggle_float, { desc = "Toggle Oil Float", silent = true })
     end,
 }

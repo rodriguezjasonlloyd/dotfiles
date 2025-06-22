@@ -39,7 +39,6 @@ return {
                         return require("which-key.extras").expand.win()
                     end,
                 },
-                -- better descriptions
                 { "gx", desc = "Open with system app" },
             },
         },
@@ -61,10 +60,11 @@ return {
         },
     },
     config = function(_, opts)
-        local wk = require("which-key")
-        wk.setup(opts)
+        local which_key = require("which-key")
+        which_key.setup(opts)
+
         if not vim.tbl_isempty(opts.defaults) then
-            wk.register(opts.defaults)
+            which_key.register(opts.defaults)
         end
     end,
 }

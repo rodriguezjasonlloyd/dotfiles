@@ -1,6 +1,10 @@
 return {
     "folke/noice.nvim",
     event = "VeryLazy",
+    dependencies = {
+        "MunifTanjim/nui.nvim",
+        "rcarriga/nvim-notify",
+    },
     opts = {
         lsp = {
             override = {
@@ -29,7 +33,6 @@ return {
         },
     },
     keys = {
-        { "<leader>sn", "", desc = "+noice" },
         {
             "<S-Enter>",
             function()

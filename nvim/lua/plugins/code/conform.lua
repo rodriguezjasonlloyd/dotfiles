@@ -1,8 +1,6 @@
 return {
     "stevearc/conform.nvim",
-    dependencies = { "williamboman/mason.nvim" },
-    lazy = true,
-    cmd = "ConformInfo",
+    dependencies = { "mason-org/mason.nvim" },
     keys = {
         {
             "<leader>cf",
@@ -11,25 +9,10 @@ return {
             end,
             mode = { "n", "v" },
             desc = "Format Buffer",
+            silent = true,
         },
     },
     opts = {
-        format_on_save = function(bufnr)
-            if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-                return
-            end
-
-            return { timeout_ms = 500, lsp_fallback = true }
-        end,
-
-        format_after_save = function(bufnr)
-            if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-                return
-            end
-
-            return { lsp_fallback = true }
-        end,
-
         formatters_by_ft = {
             html = { "prettierd" },
             css = { "prettierd" },
@@ -42,12 +25,15 @@ return {
             typescript = { "prettierd" },
             typescriptreact = { "prettierd" },
             rust = { "rustfmt" },
+            python = { "isort", "black" },
         },
-
-        formatters = {
-            injected = { options = { ignore_errors = true } },
+        format_on_save = {
+            lsp_format = "fallback",
+            timeout_ms = 500,
         },
-
+        format_after_save = {
+            lsp_format = "fallback",
+        },
         default_format_opts = {
             timeout_ms = 3000,
             async = false,
