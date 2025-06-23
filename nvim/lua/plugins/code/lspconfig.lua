@@ -27,6 +27,29 @@ return {
         })
 
         vim.lsp.config("luau_lsp", {
+            on_attach = function()
+                local current_working_directory = vim.fn.getcwd()
+                local project = vim.fs.find(function(name, path)
+                    return name:match(".*%.project%.json$") and path == current_working_directory
+                end, { path = current_working_directory, depth = 1, type = "file", limit = 1 })[1]
+
+                if project and project ~= "" then
+                    vim.system({
+                        "rojo",
+                        "sourcemap",
+                        "--watch",
+                        project,
+                        "--output",
+                        vim.fs.joinpath(current_working_directory, "sourcemap.json"),
+                    }, { cwd = current_working_directory, text = true }, function(result)
+                        if result.stderr and result.stderr ~= "" then
+                            vim.schedule(function()
+                                vim.notify("Rojo Sourcemap Error: " .. result.stderr, vim.log.levels.ERROR)
+                            end)
+                        end
+                    end)
+                end
+            end,
             cmd = function(dispatchers)
                 local luau_directory = vim.fs.joinpath(vim.fn.stdpath("data"), "luau")
                 local definitions = vim.fs.joinpath(luau_directory, "types.d.luau")
