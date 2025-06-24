@@ -2,5 +2,6 @@ LICENSE
 README.md
 nvim/
 {{ if ne .chezmoi.os "linux" -}}
+.bashrc
 .zshrc
 {{- end }}
