@@ -11,5 +11,10 @@ return {
         text = {
             workspace = "",
         },
+        advanced = {
+            server = {
+                timeout = 30000,
+            },
+        },
     },
 }
