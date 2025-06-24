@@ -9,16 +9,14 @@ return {
             "stylua", -- Lua
             "prettierd", -- JS/TS/HTML/CSS
             "google-java-format", -- Java
-            "black", -- Python
-            "isort", -- Python (Sort Imports)
+            "ruff", -- Python
 
             -- Linters
             "eslint_d", -- JS/TS
             "selene", -- Lua
-            "pylint", -- Python
 
             -- LSP Servers
-            "pyright", -- Python
+            "python-lsp-server", -- Python
             "lua-language-server", -- Lua
             "luau-lsp", -- Luau
             "typescript-language-server", -- JS/TS
