@@ -25,15 +25,14 @@ return {
             "jdtls", -- Java
         }
 
-        require("mason").setup({
-            max_concurrent_installers = 4,
+        require("mason").setup({ max_concurrent_installers = 4 })
+
+        require("mason-lspconfig").setup({
+            automatic_enable = { exclude = { "ruff" } },
+            ensure_installed = {},
         })
 
-        require("mason-lspconfig").setup()
-
-        require("mason-tool-installer").setup({
-            ensure_installed = ensure_installed,
-        })
+        require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
         local registry = require("mason-registry")
 
