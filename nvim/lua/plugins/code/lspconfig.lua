@@ -111,5 +111,34 @@ return {
                 })
             end,
         })
+
+        vim.lsp.config("pylsp", {
+            capabilities = capabilities,
+            settings = {
+                pylsp = {
+                    configurationSources = {},
+                    plugins = {
+                        autopep8 = { enabled = false },
+                        flake8 = { enabled = false },
+                        pycodestyle = { enabled = false },
+                        pyflakes = { enabled = false },
+                        yapf = { enabled = false },
+                        mccabe = { enabled = false },
+                        pylint = { enabled = false },
+                        pydocstyle = { enabled = false },
+                        jedi = { auto_import_modules = {} },
+                        jedi_completion = {
+                            include_class_objects = true,
+                            include_function_objects = true,
+                            fuzzy = true,
+                            eager = true,
+                            cache_for = {},
+                        },
+                        rope_completion = { enabled = false },
+                        signature = { formatter = "ruff" },
+                    },
+                },
+            },
+        })
     end,
 }
