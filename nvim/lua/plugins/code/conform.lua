@@ -22,6 +22,7 @@ return {
             javascript = { "prettierd" },
             javascriptreact = { "prettierd" },
             json = { "prettierd" },
+            jsonc = { "prettierd" },
             typescript = { "prettierd" },
             typescriptreact = { "prettierd" },
             rust = { "rustfmt" },
