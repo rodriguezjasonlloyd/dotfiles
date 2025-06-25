@@ -2,9 +2,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = { "VeryLazy" },
     opts = {
-        options = {
-            theme = "nord",
-        },
+        options = { theme = "catppuccin" },
         sections = {
             lualine_a = { "mode" },
             lualine_b = { "branch", "diff", "diagnostics" },
