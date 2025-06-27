@@ -1,13 +1,8 @@
 return {
     "akinsho/bufferline.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons", "shaunsingh/nord.nvim" },
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     event = { "VeryLazy" },
     config = function()
-        local highlights = require("nord").bufferline.highlights({
-            italic = true,
-            bold = true,
-        })
-
         require("bufferline").setup({
             options = {
                 indicator = { style = "none" },
@@ -21,7 +16,6 @@ return {
                     return s
                 end,
             },
-            highlights = highlights,
         })
     end,
 }
