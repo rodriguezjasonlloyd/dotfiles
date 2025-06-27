@@ -12,7 +12,7 @@ end
 
 return {
     "hrsh7th/nvim-cmp",
-    event = "VeryLazy",
+    event = { "VeryLazy" },
     dependencies = {
         "folke/lazydev.nvim",
         "hrsh7th/cmp-nvim-lsp",

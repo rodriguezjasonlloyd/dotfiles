@@ -1,1 +1,4 @@
-return { "brianhuster/treesitter-endwise.nvim" }
+return {
+    "brianhuster/treesitter-endwise.nvim",
+    event = { "VeryLazy" },
+}
