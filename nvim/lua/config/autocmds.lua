@@ -25,7 +25,7 @@ autocmd("VimEnter", {
     end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
+autocmd("FileType", {
     group = augroup("CloseFile"),
     pattern = {
         "PlenaryTestPopup",
