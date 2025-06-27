@@ -18,6 +18,9 @@ return {
 
         vim.lsp.config("*", {
             capabilities = capabilities,
+            on_attach = function(_, bufnr)
+                vim.treesitter.start(bufnr)
+            end,
         })
 
         vim.lsp.config("lua_ls", {
@@ -31,7 +34,9 @@ return {
         })
 
         vim.lsp.config("luau_lsp", {
-            on_attach = function()
+            on_attach = function(_, bufnr)
+                vim.lsp.config["*"].on_attach(_, bufnr)
+
                 local current_working_directory = vim.fn.getcwd()
                 local project = vim.fs.find(function(name, path)
                     return name:match(".*%.project%.json$") and path == current_working_directory
@@ -80,6 +85,8 @@ return {
 
         vim.lsp.config("ts_ls", {
             on_attach = function(_, bufnr)
+                vim.lsp.config["*"].on_attach(_, bufnr)
+
                 local function organize_imports()
                     vim.lsp.buf_request_sync(bufnr, "workspace/executeCommand", {
                         command = "_typescript.organizeImports",
