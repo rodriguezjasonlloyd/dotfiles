@@ -4,8 +4,14 @@ return {
     dependencies = {
         "folke/lazydev.nvim",
         "hrsh7th/cmp-nvim-lsp",
+        "mason-org/mason-lspconfig.nvim",
     },
     config = function()
+        require("mason-lspconfig").setup({
+            automatic_enable = { exclude = { "ruff" } },
+            ensure_installed = {},
+        })
+
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local capabilities =
             vim.tbl_extend("force", vim.lsp.protocol.make_client_capabilities(), cmp_nvim_lsp.default_capabilities())

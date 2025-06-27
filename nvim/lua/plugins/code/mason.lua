@@ -1,10 +1,7 @@
 return {
     "mason-org/mason.nvim",
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Open Mason", silent = true } },
-    dependencies = {
-        "WhoIsSethDaniel/mason-tool-installer.nvim",
-        "mason-org/mason-lspconfig.nvim",
-    },
+    dependencies = { "WhoIsSethDaniel/mason-tool-installer.nvim" },
     build = ":MasonUpdate",
     config = function()
         local ensure_installed = {
@@ -29,11 +26,6 @@ return {
         }
 
         require("mason").setup({ max_concurrent_installers = 4 })
-
-        require("mason-lspconfig").setup({
-            automatic_enable = { exclude = { "ruff" } },
-            ensure_installed = {},
-        })
 
         require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
