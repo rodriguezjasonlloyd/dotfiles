@@ -4,8 +4,6 @@ return {
     dependencies = {
         "folke/lazydev.nvim",
         "hrsh7th/cmp-nvim-lsp",
-        "mason-org/mason.nvim",
-        "mason-org/mason-lspconfig.nvim",
     },
     config = function()
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
@@ -75,11 +73,6 @@ return {
         })
 
         vim.lsp.config("ts_ls", {
-            capabilities = capabilities,
-            settings = {
-                typescript = { suggest = { completeFunctionCalls = false } },
-                javascript = { suggest = { completeFunctionCalls = false } },
-            },
             on_attach = function(_, bufnr)
                 local function organize_imports()
                     vim.lsp.buf_request_sync(bufnr, "workspace/executeCommand", {
@@ -113,7 +106,6 @@ return {
         })
 
         vim.lsp.config("pylsp", {
-            capabilities = capabilities,
             settings = {
                 pylsp = {
                     configurationSources = {},
