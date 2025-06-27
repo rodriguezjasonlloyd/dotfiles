@@ -1,7 +1,10 @@
 return {
     "mason-org/mason.nvim",
     keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Open Mason", silent = true } },
-    dependencies = { "WhoIsSethDaniel/mason-tool-installer.nvim" },
+    dependencies = {
+        "WhoIsSethDaniel/mason-tool-installer.nvim",
+        "mason-org/mason-lspconfig.nvim",
+    },
     build = ":MasonUpdate",
     config = function()
         local ensure_installed = {
