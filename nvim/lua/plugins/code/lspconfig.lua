@@ -110,11 +110,6 @@ return {
                     organize_imports,
                     { desc = "Organize TS imports" }
                 )
-
-                vim.api.nvim_create_autocmd("BufWritePre", {
-                    buffer = bufnr,
-                    callback = organize_imports,
-                })
             end,
         })
 
