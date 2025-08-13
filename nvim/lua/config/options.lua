@@ -1,92 +1,67 @@
 local opt = vim.opt
-local g = vim.g
 
--- Global Leader Settings
-g.mapleader = " "
-g.maplocalleader = " "
-
--- Clipboard and Auto-Save
-opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus"
+-- Clipboard & Auto-Save
+opt.clipboard = "unnamedplus"
 opt.autowrite = true
 
--- Completion and Conceal
-opt.completeopt = "menu,menuone,noselect"
-opt.conceallevel = 2
+-- Completion & Popup Menu
+opt.completeopt = { "menu", "menuone", "noselect" }
+opt.pumblend = 30
+opt.pumheight = 10
 
--- Cursor and Mouse
+-- Search
+opt.ignorecase = true
+
+-- Interface & Display
 opt.cursorline = true
-opt.mouse = "a"
-
--- Formatting, Display, and Folding
-opt.expandtab = true
-opt.formatoptions = "jcroqlnt"
-opt.fillchars = {
-    foldopen = "",
-    foldclose = "",
-    fold = " ",
-    foldsep = " ",
-    diff = "╱",
-    eob = " ",
-}
-opt.foldlevel = 99
-opt.linebreak = true
-opt.list = true
 opt.number = true
 opt.relativenumber = true
 opt.ruler = false
+opt.signcolumn = "yes"
+opt.list = true
 opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
-opt.fileformat = "unix"
+opt.termguicolors = true
+opt.linebreak = true
 
--- Indentation and Tab Settings
+-- Indentation & Tabs
+opt.expandtab = true
 opt.shiftwidth = 4
-opt.tabstop = 2
+opt.tabstop = 4
 opt.smartindent = true
-opt.shiftround = true
 
--- Grep and Search
-opt.grepformat = "%f:%l:%c:%m"
-opt.grepprg = "rg --vimgrep"
-opt.ignorecase = true
-
--- Command and Jump Options
-opt.inccommand = "nosplit"
-opt.jumpoptions = "view"
-
--- Popup Menu
-opt.pumblend = 10
-opt.pumheight = 10
-
--- Scrolling and Window Dimensions
-opt.scrolloff = 10
-opt.sidescrolloff = 8
+-- Splits & Windows
+opt.splitbelow = true
+opt.splitright = true
+opt.splitkeep = "screen"
 opt.winminwidth = 5
 
--- Session and Split Behavior
-opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
-opt.splitbelow = true
-opt.splitkeep = "screen"
-opt.splitright = true
+-- Scrolling & Movement
+opt.scrolloff = 10
+opt.sidescrolloff = 8
+opt.jumpoptions = "view"
 
--- Message Display and Status Column
-opt.shortmess:append({ W = true, I = true, c = true, C = true })
-opt.showmode = false
-opt.signcolumn = "yes"
+-- Session & Persistence
+opt.shada = ""
+opt.shadafile = "NONE"
+opt.sessionoptions = { "buffers", "folds" }
 
--- Spell Checking
-opt.spelllang = { "en" }
-
--- Terminal Colors and Appearance
-opt.termguicolors = true
-
--- Timeout and Update Settings
-opt.timeoutlen = 300
-opt.updatetime = 200
-
--- Undo and Backup
+-- Undo, Backup & Fileformats
 opt.undofile = true
 opt.undolevels = 10000
 opt.backupcopy = "yes"
+opt.fileformats = "unix"
+opt.fileformat = "unix"
 
--- Virtual Editing and Wild Mode
+-- Messages & Mode
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
+opt.showmode = false
+
+-- Virtual Editing & Wildcards
 opt.virtualedit = "block"
-opt.wildmode = "longest:full,full"
+opt.wildmode = { "longest", "full" }
+
+-- Timing
+opt.timeoutlen = 300
+
+-- Spell Checking
+opt.spelllang = "en"
