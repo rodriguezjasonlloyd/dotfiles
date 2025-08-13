@@ -13,6 +13,9 @@ return {
                 ["cmp.entry.get_documentation"] = true,
             },
         },
+        presets = {
+            cmdline_output_to_split = true,
+        },
         routes = {
             {
                 filter = {
