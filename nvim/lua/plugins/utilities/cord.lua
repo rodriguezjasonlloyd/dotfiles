@@ -9,9 +9,6 @@ return {
         idle = {
             enabled = false,
         },
-        text = {
-            workspace = "",
-        },
         advanced = {
             server = {
                 timeout = 30000,
