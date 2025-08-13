@@ -10,21 +10,6 @@ autocmd("TextYankPost", {
     end,
 })
 
-autocmd("VimEnter", {
-    group = augroup("SessionRestore"),
-    callback = function()
-        if vim.fn.argc() == 0 and not vim.o.modified then
-            vim.defer_fn(function()
-                local ok, persistence = pcall(require, "persistence")
-                if not ok or type(persistence.load) ~= "function" then
-                    return
-                end
-                persistence.load()
-            end, 0)
-        end
-    end,
-})
-
 autocmd("FileType", {
     group = augroup("CloseFile"),
     pattern = {
