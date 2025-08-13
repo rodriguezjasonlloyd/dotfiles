@@ -19,6 +19,7 @@ return {
             markdown = { "prettierd" },
             lua = { "stylua" },
             luau = { "stylua" },
+            java = { "google-java-format" },
             javascript = { "prettierd" },
             javascriptreact = { "prettierd" },
             json = { "prettierd" },
@@ -27,6 +28,11 @@ return {
             typescriptreact = { "prettierd" },
             rust = { "rustfmt" },
             python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+        },
+        formatters = {
+            ["google-java-format"] = {
+                prepend_args = { "--aosp" },
+            },
         },
         format_on_save = {
             lsp_format = "fallback",
