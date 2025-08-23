@@ -36,13 +36,13 @@ return {
         },
         format_on_save = {
             lsp_format = "fallback",
-            timeout_ms = 500,
+            timeout_ms = 10000,
         },
         format_after_save = {
             lsp_format = "fallback",
         },
         default_format_opts = {
-            timeout_ms = 3000,
+            timeout_ms = 10000,
             async = false,
             quiet = false,
             lsp_fallback = true,
