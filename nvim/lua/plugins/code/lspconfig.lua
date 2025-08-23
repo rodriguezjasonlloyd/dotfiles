@@ -1,11 +1,7 @@
 return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
-    dependencies = {
-        "folke/lazydev.nvim",
-        "hrsh7th/cmp-nvim-lsp",
-        "mason-org/mason-lspconfig.nvim",
-    },
+    dependencies = { "hrsh7th/cmp-nvim-lsp", "mason-org/mason-lspconfig.nvim" },
     config = function()
         require("mason-lspconfig").setup({
             automatic_enable = { exclude = { "ruff" } },
