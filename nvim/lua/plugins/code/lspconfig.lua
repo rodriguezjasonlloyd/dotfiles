@@ -29,7 +29,6 @@ return {
 
         vim.lsp.config("luau_lsp", {
             on_attach = function(_, bufnr)
-                vim.lsp.config["*"].on_attach(_, bufnr)
                 vim.treesitter.start(bufnr)
 
                 local cwd = vim.fn.getcwd()
@@ -74,7 +73,7 @@ return {
 
         vim.lsp.config("ts_ls", {
             on_attach = function(_, bufnr)
-                vim.lsp.config["*"].on_attach(_, bufnr)
+                vim.treesitter.start(bufnr)
 
                 local function organize_imports()
                     vim.lsp.buf_request_sync(bufnr, "workspace/executeCommand", {
