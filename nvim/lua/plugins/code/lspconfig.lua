@@ -6,6 +6,7 @@ return {
         require("mason-lspconfig").setup({ automatic_enable = { exclude = { "ruff" } } })
 
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
         local capabilities =
             vim.tbl_extend("force", vim.lsp.protocol.make_client_capabilities(), cmp_nvim_lsp.default_capabilities())
 
@@ -29,11 +30,13 @@ return {
         vim.lsp.config("luau_lsp", {
             on_attach = function(_, bufnr)
                 vim.lsp.config["*"].on_attach(_, bufnr)
+                vim.treesitter.start(bufnr)
 
-                local current_working_directory = vim.fn.getcwd()
+                local cwd = vim.fn.getcwd()
+
                 local project = vim.fs.find(function(name, path)
-                    return name:match(".*%.project%.json$") and path == current_working_directory
-                end, { path = current_working_directory, depth = 1, type = "file", limit = 1 })[1]
+                    return name:match(".*%.project%.json$") and path == cwd
+                end, { path = cwd, depth = 1, type = "file", limit = 1 })[1]
 
                 if project and project ~= "" then
                     vim.system({
@@ -42,8 +45,8 @@ return {
                         "--watch",
                         project,
                         "--output",
-                        vim.fs.joinpath(current_working_directory, "sourcemap.json"),
-                    }, { cwd = current_working_directory, text = true }, function(result)
+                        vim.fs.joinpath(cwd, "sourcemap.json"),
+                    }, { cwd = cwd, text = true }, function(result)
                         if result.stderr and result.stderr ~= "" then
                             vim.schedule(function()
                                 vim.notify("Rojo Sourcemap Error: " .. result.stderr, vim.log.levels.ERROR)
@@ -66,14 +69,7 @@ return {
                     "--no-flags-enabled",
                 }, dispatchers)
             end,
-            settings = {
-                ["luau-lsp"] = {
-                    completion = {
-                        imports = { enabled = true },
-                        autocompleteEnd = true,
-                    },
-                },
-            },
+            settings = { ["luau-lsp"] = { completion = { imports = { enabled = true } } } },
         })
 
         vim.lsp.config("ts_ls", {
@@ -86,8 +82,6 @@ return {
                         arguments = { vim.api.nvim_buf_get_name(bufnr) },
                         title = "",
                     }, 500)
-
-                    vim.notify("Imports Organized", vim.log.levels.INFO)
                 end
 
                 vim.keymap.set(
