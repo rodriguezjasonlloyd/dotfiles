@@ -1,4 +1,4 @@
 return {
-    "brianhuster/treesitter-endwise.nvim",
-    event = { "VeryLazy" },
+    "RRethy/nvim-treesitter-endwise",
+    ft = { "lua", "luau" },
 }
