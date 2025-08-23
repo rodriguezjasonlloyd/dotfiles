@@ -16,7 +16,7 @@ return {
             "selene", -- Lua
 
             -- LSP Servers
-            "python-lsp-server", -- Python
+            "pyrefly", -- Python
             "lua-language-server", -- Lua
             "luau-lsp", -- Luau
             "typescript-language-server", -- JS/TS
