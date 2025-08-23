@@ -46,7 +46,7 @@ return {
             for _, tool in ipairs(ensure_installed) do
                 local package = registry.get_package(tool)
 
-                if not package:is_installed() and not package:is_installing() then
+                if not package:is_installed() then
                     package:install({}, function(success)
                         if not success then
                             vim.notify(("Failed installing %s"):format(package:name()), vim.log.levels.ERROR)
