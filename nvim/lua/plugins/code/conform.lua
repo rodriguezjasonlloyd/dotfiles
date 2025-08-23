@@ -11,6 +11,15 @@ return {
             desc = "Format Buffer",
             silent = true,
         },
+        {
+            "<leader>cl",
+            function()
+                require("conform").format({ timeout_ms = 3000, formatters = { "eslint_d" } })
+            end,
+            mode = { "n", "v" },
+            desc = "ESLint Fix",
+            silent = true,
+        },
     },
     opts = {
         formatters_by_ft = {
