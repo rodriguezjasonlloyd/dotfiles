@@ -100,6 +100,14 @@ return {
             end,
         })
 
+        vim.lsp.config("lemminx", { filetypes = { "xml", "xsd", "xsl", "xslt", "svg", "ant" } })
+
+        vim.lsp.config("jdtls", {
+            init_options = {
+                settings = {
+                    java = {
+                        project = { sourcePaths = { "src" } },
+                        configuration = { runtimes = { { path = vim.env.JAVA_HOME } } },
                     },
                 },
             },
