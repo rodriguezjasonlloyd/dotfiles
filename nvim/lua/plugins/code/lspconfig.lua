@@ -3,10 +3,7 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     dependencies = { "hrsh7th/cmp-nvim-lsp", "mason-org/mason-lspconfig.nvim" },
     config = function()
-        require("mason-lspconfig").setup({
-            automatic_enable = { exclude = { "ruff" } },
-            ensure_installed = {},
-        })
+        require("mason-lspconfig").setup({ automatic_enable = { exclude = { "ruff" } } })
 
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local capabilities =
