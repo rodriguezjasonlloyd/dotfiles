@@ -107,9 +107,7 @@ return {
         cmp.event:on(
             "confirm_done",
             cmp_autopairs.on_confirm_done({
-                filetypes = {
-                    typescriptreact = false,
-                },
+                filetypes = { typescriptreact = false },
             })
         )
     end,
