@@ -23,6 +23,7 @@ return {
             "json-lsp", -- JSON
             "rust-analyzer", -- Rust
             "jdtls", -- Java
+            "lemminx", -- XML
         }
 
         require("mason").setup({ max_concurrent_installers = 4 })
