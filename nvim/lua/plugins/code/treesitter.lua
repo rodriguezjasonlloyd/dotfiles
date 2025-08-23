@@ -44,7 +44,7 @@ return {
         end, ensure_installed)
 
         if #not_installed > 0 then
-            require("nvim-treesitter").install(not_installed)
+            treesitter.install(not_installed)
         end
     end,
 }
