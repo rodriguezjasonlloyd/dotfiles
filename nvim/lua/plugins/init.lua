@@ -1,6 +1,6 @@
 vim.pack.add({
     -- Visuals
-    { src = "https://github.com/mcauley-penney/techbase.nvim" },
+    { src = "https://github.com/wuelnerdotexe/vim-enfocado" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
     { src = "https://github.com/MunifTanjim/nui.nvim" },
     { src = "https://github.com/nvim-lualine/lualine.nvim" },

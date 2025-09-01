@@ -1,6 +1,6 @@
-require("techbase").setup({})
+vim.g.enfocado_style = "neon"
 
-vim.cmd.colorscheme("techbase")
+vim.cmd.colorscheme("enfocado")
 
 require("noice").setup({
     presets = {
