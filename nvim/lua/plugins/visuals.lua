@@ -8,10 +8,27 @@ require("noice").setup({
         bottom_search = true,
         command_palette = true,
         long_message_to_split = true,
-        lsp_doc_border = true,
     },
-    cmdline = {
-        view = "cmdline",
+    cmdline = { view = "cmdline" },
+    lsp = {
+        override = {
+            ["vim.lsp.util.convert_input_to_markdown_lines"] = false,
+            ["vim.lsp.util.stylize_markdown"] = false,
+            ["cmp.entry.get_documentation"] = false,
+        },
+    },
+    views = {
+        hover = {
+            border = { style = "single", padding = { 0, 0 } },
+            position = { row = 2, col = 1 },
+        },
+    },
+    routes = {
+        {
+            view = "notify",
+            filter = { event = "lsp", kind = "progress" },
+            opts = { replace = true },
+        },
     },
 })
 
