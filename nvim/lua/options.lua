@@ -4,7 +4,6 @@ local o = vim.o
 -- Basic Display
 o.number = true
 o.relativenumber = true
-o.cursorline = true
 o.signcolumn = "yes"
 o.wrap = false
 o.linebreak = true
@@ -22,12 +21,10 @@ o.tabstop = 4
 o.list = true
 opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 opt.fillchars = { eob = " " }
-o.winborder = "rounded"
+o.winborder = "none"
 
 -- Completion & Popup Menu
 opt.completeopt = { "menu", "menuone", "popup", "noselect" }
-o.pumblend = 30
-o.pumheight = 10
 
 -- Splits & Windows
 o.splitbelow = true
@@ -49,7 +46,7 @@ o.undofile = true
 o.backupcopy = "yes"
 
 -- File Formats
-o.fileformats = "unix"
+o.fileformats = "unix,dos,mac"
 
 -- Session & Persistence
 opt.sessionoptions = { "buffers", "folds" }
