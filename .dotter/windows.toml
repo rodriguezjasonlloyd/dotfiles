@@ -1,2 +1,5 @@
 [nvim.files]
 nvim = "~/AppData/Local/nvim"
+
+[powershell.files]
+PowerShell = "~/Documents/PowerShell"
