@@ -2,9 +2,6 @@ add_newline = false
 
 [shell]
 disabled = false
-powershell_indicator = ""
-cmd_indicator = ""
-bash_indicator = ""
 
 [os]
 disabled = false
