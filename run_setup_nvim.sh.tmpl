@@ -1,4 +1,0 @@
-{{- if eq .chezmoi.os "linux" -}}
-#!/bin/sh
-cp -r {{ .chezmoi.sourceDir }}/nvim $HOME/.config/nvim
-{{- end }}
