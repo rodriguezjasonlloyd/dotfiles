@@ -1,12 +1,11 @@
-#
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
+export EDITOR=nvim
+
+alias ls='eza --icons -F -H --group-directories-first --git -1'
+alias ll='eza --icons -F -H --group-directories-first --git -1 -alF'
 
 eval "$(starship init bash)"
+eval "$(zoxide init --cmd cd bash)"
+
+fastfetch
