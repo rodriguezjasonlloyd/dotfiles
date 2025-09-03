@@ -2,7 +2,7 @@
 wezterm = "~/.config/wezterm"
 
 [shell.files]
-"starship.toml" = { if = "is_executable \"starship\"", target = "~/.config/starship.toml", type = "symbolic" }
+"starship.toml" = { if = "(is_executable \"starship\")", target = "~/.config/starship.toml", type = "symbolic" }
 
 [bash.files]
 bashrc = "~/.bashrc"
