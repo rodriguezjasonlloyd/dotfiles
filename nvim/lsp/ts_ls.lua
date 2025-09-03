@@ -1,3 +1,11 @@
+local function organize_imports(bufnr)
+    vim.lsp.buf_request_sync(bufnr, "workspace/executeCommand", {
+        command = "_typescript.organizeImports",
+        arguments = { vim.api.nvim_buf_get_name(bufnr) },
+        title = "",
+    }, 500)
+end
+
 ---@type vim.lsp.Config
 return {
     init_options = { hostInfo = "neovim" },
@@ -78,5 +86,13 @@ return {
                 },
             })
         end, {})
+
+        vim.keymap.set("n", "<leader>oi", function()
+            organize_imports(bufnr)
+        end, { buffer = bufnr, desc = "Organize Imports", silent = true })
+
+        vim.api.nvim_buf_create_user_command(bufnr, "OrganizeImports", function()
+            organize_imports(bufnr)
+        end, { desc = "Organize TS imports" })
     end,
 }
