@@ -1,9 +1,6 @@
 [wezterm.files]
 wezterm = "~/.config/wezterm"
 
-[nvim.files]
-nvim = "~/.config/nvim"
-
 [shell.files]
 "starship.toml" = { if = "is_executable \"starship\"", target = "~/.config/starship.toml", type = "symbolic" }
 
@@ -12,3 +9,6 @@ bashrc = "~/.bashrc"
 
 [zsh.files]
 zshrc = "~/.zshrc"
+
+[nvim.files]
+nvim = "~/.config/nvim"
