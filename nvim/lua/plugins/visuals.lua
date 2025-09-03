@@ -1,6 +1,4 @@
-vim.g.enfocado_style = "neon"
-
-vim.cmd.colorscheme("enfocado")
+vim.cmd.colorscheme("rose-pine")
 
 require("noice").setup({
     presets = {
