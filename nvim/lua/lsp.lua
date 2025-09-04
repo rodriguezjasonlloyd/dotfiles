@@ -7,6 +7,7 @@ vim.lsp.enable({
     "pyrefly",
     "ruff",
     "rust_analyzer",
+    "tombi",
     "ts_ls",
 })
 

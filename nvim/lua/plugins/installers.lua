@@ -21,6 +21,7 @@ require("mason-tool-installer").setup({
         "json-lsp", -- JSON
         "rust-analyzer", -- Rust
         "jdtls", -- Java
+        "tombi", -- TOML
         "lemminx", -- XML
     },
 })

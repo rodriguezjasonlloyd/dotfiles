@@ -18,6 +18,7 @@ conform.setup({
         javascriptreact = { "prettierd" },
         json = { "prettierd" },
         jsonc = { "prettierd" },
+        toml = { "tombi" },
         typescript = { "prettierd" },
         typescriptreact = { "prettierd" },
         rust = { "rustfmt" },
