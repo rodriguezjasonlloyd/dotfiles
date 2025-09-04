@@ -1,3 +1,5 @@
+$env:EDITOR = "nvim"
+
 Set-PSReadLineOption -HistorySaveStyle SaveNothing
 
 Remove-Item Alias:ls -Force
@@ -45,8 +47,6 @@ Invoke-Expression (& starship init powershell)
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 flashfetch
-
-$env:EDITOR = "nvim"
 
 #region mamba initialize
 # !! Contents within this block are managed by 'mamba shell init' !!

@@ -10,5 +10,8 @@ bashrc = "~/.bashrc"
 [zsh.files]
 zshrc = "~/.zshrc"
 
+[yazi.files]
+yazi = "~/.config/yazi"
+
 [nvim.files]
 nvim = "~/.config/nvim"
