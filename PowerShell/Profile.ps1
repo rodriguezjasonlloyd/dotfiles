@@ -1,4 +1,5 @@
 $env:EDITOR = "nvim"
+$env:YAZI_FILE_ONE = "$($env:ProgramFiles)\Git\usr\bin\file.exe"
 
 Set-PSReadLineOption -HistorySaveStyle SaveNothing
 
