@@ -44,4 +44,13 @@ function RoServe {
 Invoke-Expression (& starship init powershell)
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
-fastfetch
+flashfetch
+
+$env:EDITOR = "nvim"
+
+#region mamba initialize
+# !! Contents within this block are managed by 'mamba shell init' !!
+$Env:MAMBA_ROOT_PREFIX = "C:\Users\ohirume\miniforge3"
+$Env:MAMBA_EXE = "C:\Users\ohirume\miniforge3\Library\bin\mamba.exe"
+(& $Env:MAMBA_EXE 'shell' 'hook' -s 'powershell' -r $Env:MAMBA_ROOT_PREFIX) | Out-String | Invoke-Expression
+#endregion
