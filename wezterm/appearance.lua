@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = {}
 
-config.color_scheme = "Ayu Dark (Gogh)"
+config.color_scheme = "ayu"
 config.font = wezterm.font_with_fallback({
     { family = "JetBrainsMono Nerd Font", weight = "Bold" },
     { family = "MesloLGS Nerd Font Mono", weight = "Bold" },
