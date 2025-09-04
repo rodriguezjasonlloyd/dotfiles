@@ -53,3 +53,6 @@ Ubuntu = " "
 Unknown = " "
 Void = " "
 Windows = ""
+
+[conda]
+symbol = " "
