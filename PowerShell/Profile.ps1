@@ -47,7 +47,7 @@ function RoServe {
 Invoke-Expression (& starship init powershell)
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
-flashfetch
+fastfetch
 
 #region mamba initialize
 # !! Contents within this block are managed by 'mamba shell init' !!
