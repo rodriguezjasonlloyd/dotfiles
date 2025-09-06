@@ -3,6 +3,7 @@ wezterm = "~/.config/wezterm"
 
 [shell.files]
 "starship.toml" = { if = "(is_executable \"starship\")", target = "~/.config/starship.toml", type = "symbolic" }
+"fastfetch.jsonc" = { if = "(is_executable \"fastfetch\")", target = "~/.config/fastfetch/config.jsonc", type = "symbolic" }
 
 [bash.files]
 bashrc = "~/.bashrc"
