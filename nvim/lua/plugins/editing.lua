@@ -8,50 +8,48 @@ local conform = require("conform")
 
 conform.setup({
     formatters_by_ft = {
-        html = { "prettierd" },
-        css = { "prettierd" },
-        markdown = { "prettierd" },
+        html = { "biomejs" },
+        css = { "biomejs" },
+        javascript = { "biomejs" },
+        javascriptreact = { "biomejs" },
+        typescript = { "biomejs" },
+        typescriptreact = { "biomejs" },
+        markdown = { "biomejs" },
+        json = { "biomejs" },
+        jsonc = { "biomejs" },
+        yaml = { "prettierd" },
         lua = { "stylua" },
         luau = { "stylua" },
-        java = { "google-java-format" },
-        javascript = { "prettierd" },
-        javascriptreact = { "prettierd" },
-        json = { "prettierd" },
-        jsonc = { "prettierd" },
+        java = { "google-java-format", prepend_args = { "--aosp" } },
         toml = { "tombi" },
-        typescript = { "prettierd" },
-        typescriptreact = { "prettierd" },
         rust = { "rustfmt" },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
-    },
-    formatters = {
-        ["google-java-format"] = {
-            prepend_args = { "--aosp" },
-        },
-    },
-    format_on_save = {
-        timeout_ms = 10000,
     },
     default_format_opts = {
         timeout_ms = 10000,
         lsp_format = "fallback",
     },
+    format_on_save = true,
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>cf", conform.format, { desc = "Format Buffer", silent = true })
+
 vim.keymap.set({ "n", "v" }, "<leader>cl", function()
-    conform.format({ formatters = { "eslint_d" } })
-end, { desc = "ESLint Fix", silent = true })
+    conform.format({ formatters = { "biome-check" } })
+end, { desc = "Lint Fix", silent = true })
 
 local lint = require("lint")
 
 lint.linters_by_ft = {
     lua = { "selene" },
     luau = { "selene" },
-    javascript = { "eslint_d" },
-    typescript = { "eslint_d" },
-    javascriptreact = { "eslint_d" },
-    typescriptreact = { "eslint_d" },
+    javascript = { "biomejs" },
+    javascriptreact = { "biomejs" },
+    typescript = { "biomejs" },
+    typescriptreact = { "biomejs" },
+    json = { "biomejs" },
+    jsonc = { "biomejs" },
+    yaml = { "eslint_d" },
     python = { "ruff" },
 }
 

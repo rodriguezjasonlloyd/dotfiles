@@ -23,6 +23,7 @@ require("mason-tool-installer").setup({
         "jdtls", -- Java
         "tombi", -- TOML
         "lemminx", -- XML
+        "biome",
     },
 })
 
