@@ -73,8 +73,6 @@ return {
         end,
     },
     on_attach = function(client, bufnr)
-        vim.treesitter.start()
-
         vim.api.nvim_buf_create_user_command(bufnr, "LspTypescriptSourceAction", function()
             local source_actions = vim.tbl_filter(function(action)
                 return vim.startswith(action, "source.")
