@@ -10,6 +10,7 @@ vim.lsp.enable({
     "rust_analyzer",
     "tombi",
     "ts_ls",
+    "yamlls",
 })
 
 vim.diagnostic.config({ virtual_text = true })
