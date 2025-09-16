@@ -49,3 +49,12 @@ map({ "n", "v" }, "c", '"_c', { noremap = true })
 map({ "n", "v" }, "C", '"_C', { noremap = true })
 map("v", "p", '"_dP', { noremap = true })
 map("v", "P", '"_dP', { noremap = true })
+
+-- Snippets
+map({ "n", "i", "s" }, "<C-c>", function()
+    if vim.snippet.active() then
+        vim.snippet.stop()
+    end
+
+    return "<C-c>"
+end, { desc = "Stop Snippet Mode", expr = true, silent = true })
