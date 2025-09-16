@@ -3,27 +3,28 @@ mason.setup({})
 
 require("mason-tool-installer").setup({
     ensure_installed = {
-        -- Formatters
-        "stylua", -- Lua
-        "prettierd", -- JS/TS/HTML/CSS
-        "google-java-format", -- Java
-        "ruff", -- Python
+        "luau-lsp",
+        "lua-language-server",
+        "stylua",
+        "selene",
 
-        -- Linters
-        "eslint_d", -- JS/TS
-        "selene", -- Lua
+        "jdtls",
+        "lemminx",
+        "google-java-format",
 
-        -- LSP Servers
-        "pyrefly", -- Python
-        "lua-language-server", -- Lua
-        "luau-lsp", -- Luau
-        "typescript-language-server", -- JS/TS
-        "json-lsp", -- JSON
-        "rust-analyzer", -- Rust
-        "jdtls", -- Java
-        "tombi", -- TOML
-        "lemminx", -- XML
+        "pyrefly",
+        "ruff",
+
+        "typescript-language-server",
+        "json-lsp",
+        "yaml-language-server",
         "biome",
+        "oxlint",
+        "eslint_d",
+
+        "rust-analyzer",
+
+        "tombi",
     },
 })
 
