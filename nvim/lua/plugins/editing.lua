@@ -58,12 +58,6 @@ lint.linters_by_ft = {
 vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave", "BufWritePost" }, {
     group = vim.api.nvim_create_augroup("Lint", { clear = true }),
     callback = function()
-        lint.try_lint(nil, { ignore_errors = true })
-    end,
-})
-
-vim.api.nvim_create_autocmd("VimLeavePre", {
-    callback = function()
-        vim.fn.system("eslint_d stop")
+        lint.try_lint()
     end,
 })
