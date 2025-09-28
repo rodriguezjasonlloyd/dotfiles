@@ -1,19 +1,17 @@
-local function insert_package_json(config_files, field, fname)
+local function insert_package_json(root_files, field, fname)
     local path = vim.fn.fnamemodify(fname, ":h")
-    local root_with_package = vim.fs.dirname(vim.fs.find("package.json", { path = path, upward = true })[1])
+    local found = vim.fs.find("package.json", { path = path, upward = true })
 
-    if root_with_package then
-        local path_sep = vim.uv.os_uname().version:match("Windows") and "\\" or "/"
-
-        for line in io.lines(root_with_package .. path_sep .. "package.json") do
+    for _, file in ipairs(found or {}) do
+        for line in io.lines(file) do
             if line:find(field) then
-                config_files[#config_files + 1] = "package.json"
+                root_files[#root_files + 1] = vim.fs.basename(file)
                 break
             end
         end
     end
 
-    return config_files
+    return root_files
 end
 
 ---@type vim.lsp.Config
