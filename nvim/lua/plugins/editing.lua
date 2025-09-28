@@ -20,10 +20,13 @@ conform.setup({
         yaml = { "prettierd" },
         lua = { "stylua" },
         luau = { "stylua" },
-        java = { "google-java-format", prepend_args = { "--aosp" } },
+        java = { "google-java-format" },
         toml = { "tombi" },
         rust = { "rustfmt" },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+    },
+    formatters = {
+        ["google-java-format"] = { prepend_args = { "--aosp" } },
     },
     default_format_opts = {
         timeout_ms = 10000,
