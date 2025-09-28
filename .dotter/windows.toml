@@ -1,3 +1,6 @@
+[rio.files]
+"rio.toml" = "~/AppData/Local/rio/config.toml"
+
 [powershell.files]
 PowerShell = "~/Documents/PowerShell"
 

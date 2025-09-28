@@ -1,0 +1,16 @@
+confirm-before-quit = false
+
+[editor]
+program = "nvim"
+
+[fonts]
+family = "FiraCode Nerd Font Mono"
+size = 14
+
+[platform]
+windows.shell.program = "pwsh"
+windows.shell.args = ["-Login", "-WorkingDirectory", "~"]
+
+[window]
+mode = "Maximized"
+decorations = "Disabled"

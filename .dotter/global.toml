@@ -1,6 +1,9 @@
 [wezterm.files]
 wezterm = "~/.config/wezterm"
 
+[rio.files]
+"rio.toml" = "~/.config/rio/config.toml"
+
 [shell.files]
 "starship.toml" = { if = "(is_executable \"starship\")", target = "~/.config/starship.toml", type = "symbolic" }
 "fastfetch.jsonc" = { if = "(is_executable \"fastfetch\")", target = "~/.config/fastfetch/config.jsonc", type = "symbolic" }
