@@ -52,7 +52,6 @@ lint.linters_by_ft = {
     typescriptreact = { "biomejs" },
     json = { "biomejs" },
     jsonc = { "biomejs" },
-    yaml = { "eslint_d" },
     python = { "ruff" },
 }
 
