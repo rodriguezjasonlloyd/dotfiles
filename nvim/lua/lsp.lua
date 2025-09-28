@@ -5,6 +5,7 @@ vim.lsp.enable({
     "lemminx",
     "lua_ls",
     "luau_lsp",
+    "prismals",
     "pyrefly",
     "ruff",
     "rust_analyzer",
