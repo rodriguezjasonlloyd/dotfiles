@@ -2,7 +2,7 @@
 wezterm = "~/.config/wezterm"
 
 [rio.files]
-"rio.toml" = "~/.config/rio/config.toml"
+rio = "~/.config/rio"
 
 [shell.files]
 "starship.toml" = { if = "(is_executable \"starship\")", target = "~/.config/starship.toml", type = "symbolic" }
