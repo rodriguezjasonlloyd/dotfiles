@@ -1,4 +1,5 @@
 confirm-before-quit = false
+theme = "ayu"
 
 [editor]
 program = "nvim"
