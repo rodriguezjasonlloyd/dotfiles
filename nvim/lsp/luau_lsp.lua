@@ -5,7 +5,9 @@ return {
     on_attach = function()
         local cwd = vim.fn.getcwd()
 
-        local project = vim.fs.find("*.project.json", { path = cwd, depth = 1, type = "file", limit = 1 })[1]
+        local project = vim.fs.find(function(name)
+            return vim.glob.to_lpeg("*.project.json"):match(name)
+        end, { path = cwd, type = "file", limit = math.huge })[1]
 
         if project and project ~= "" then
             vim.system({
