@@ -16,6 +16,7 @@ require("mason-tool-installer").setup({
         "ruff",
 
         "typescript-language-server",
+        "superhtml",
         "json-lsp",
         "yaml-language-server",
         "prisma-language-server",

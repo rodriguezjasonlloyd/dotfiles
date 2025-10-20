@@ -9,6 +9,7 @@ vim.lsp.enable({
     "pyrefly",
     "ruff",
     "rust_analyzer",
+    "superhtml",
     "tombi",
     "ts_ls",
     "yamlls",
