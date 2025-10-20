@@ -17,6 +17,7 @@ require("mason-tool-installer").setup({
 
         "typescript-language-server",
         "superhtml",
+        "tailwindcss-language-server",
         "json-lsp",
         "yaml-language-server",
         "prisma-language-server",

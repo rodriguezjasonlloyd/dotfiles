@@ -10,6 +10,7 @@ vim.lsp.enable({
     "ruff",
     "rust_analyzer",
     "superhtml",
+    "tailwindcss",
     "tombi",
     "ts_ls",
     "yamlls",
