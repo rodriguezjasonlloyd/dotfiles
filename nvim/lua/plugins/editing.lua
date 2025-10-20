@@ -14,7 +14,7 @@ conform.setup({
         javascriptreact = { "biome" },
         typescript = { "biome" },
         typescriptreact = { "biome" },
-        markdown = { "biome" },
+        markdown = { "prettierd" },
         json = { "biome" },
         jsonc = { "biome" },
         yaml = { "prettierd" },
