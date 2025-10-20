@@ -13,5 +13,3 @@ alias ll='eza --icons -F -H --group-directories-first --git -1 -alF'
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-fastfetch
