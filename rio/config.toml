@@ -1,12 +1,38 @@
 confirm-before-quit = false
+padding-x = 4
+padding-y = [4, 4]
 theme = "ayu"
 
 [editor]
 program = "nvim"
 
 [fonts]
-family = "FiraCode Nerd Font Mono"
-size = 14
+family = "SauceCodePro Nerd Font Mono"
+size = 16
+
+[fonts.regular]
+family = "SauceCodePro Nerd Font Mono"
+style = "Normal"
+width = "Normal"
+weight = 500
+
+[fonts.bold]
+family = "SauceCodePro Nerd Font Mono"
+style = "Normal"
+width = "Normal"
+weight = 800
+
+[fonts.italic]
+family = "SauceCodePro Nerd Font Mono"
+style = "Italic"
+width = "Normal"
+weight = 500
+
+[fonts.bold-italic]
+family = "SauceCodePro Nerd Font Mono"
+style = "Italic"
+width = "Normal"
+weight = 800
 
 [platform]
 windows.shell.program = "pwsh"
