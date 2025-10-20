@@ -68,3 +68,7 @@ require("lualine").setup({
         },
     },
 })
+
+require("markview").setup({
+    preview = { enable = false },
+})

@@ -36,6 +36,7 @@ vim.pack.add({
     { src = "https://github.com/vyfor/cord.nvim" },
     { src = "https://github.com/folke/snacks.nvim" },
     { src = "https://github.com/folke/noice.nvim" },
+    { src = "https://github.com/OXY2DEV/markview.nvim" },
 }, { confirm = false })
 
 require("plugins.visuals")
