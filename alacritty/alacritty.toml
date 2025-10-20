@@ -1,0 +1,18 @@
+[font]
+normal = { family = "SauceCodePro Nerd Font Mono" }
+size = 12
+
+[keyboard]
+bindings = [
+  { key = "M", mods = "Control|Shift", action = "ToggleMaximized" },
+  { key = "Q", mods = "Control|Shift", action = "Quit" },
+]
+
+[terminal]
+shell = { program = "pwsh", args = ["-WorkingDirectory", "~"] }
+
+[window]
+dimensions = { columns = 120, lines = 40 }
+dynamic_padding = true
+dynamic_title = false
+padding = { x = 4, y = 4 }

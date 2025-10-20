@@ -1,6 +1,9 @@
 [rio.files]
 rio = "~/AppData/Local/rio"
 
+[alacritty.files]
+alacritty = "~/AppData/Roaming/alacritty"
+
 [powershell.files]
 PowerShell = "~/Documents/PowerShell"
 
