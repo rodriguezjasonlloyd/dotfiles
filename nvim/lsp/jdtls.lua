@@ -95,4 +95,13 @@ return {
         ["textDocument/rename"] = on_textdocument_rename,
         ["workspace/applyEdit"] = on_workspace_applyedit,
     },
+    on_attach = function(client, bufnr)
+        local uri = vim.uri_from_bufnr(bufnr)
+
+        client:exec_cmd({
+            title = "Refresh Diagnostics",
+            command = "java.project.refreshDiagnostics",
+            arguments = { uri, "thisFile", false },
+        })
+    end,
 }
