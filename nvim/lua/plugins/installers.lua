@@ -24,6 +24,7 @@ require("mason-tool-installer").setup({
         "biome",
         "oxlint",
         "eslint_d",
+        "prettierd",
 
         "rust-analyzer",
 
