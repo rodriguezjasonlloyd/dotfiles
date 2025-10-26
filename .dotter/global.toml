@@ -1,3 +1,6 @@
+[hypr.files]
+hypr = "~/.config/hypr"
+
 [wezterm.files]
 wezterm = "~/.config/wezterm"
 
