@@ -7,6 +7,7 @@ vim.lsp.enable({
     "luau_lsp",
     "prismals",
     "pyrefly",
+    "qmlls",
     "ruff",
     "rust_analyzer",
     "superhtml",

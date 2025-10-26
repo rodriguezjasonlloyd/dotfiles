@@ -28,6 +28,7 @@ require("mason-tool-installer").setup({
         "rust-analyzer",
 
         "tombi",
+        "qmlls",
     },
 })
 
@@ -53,6 +54,7 @@ require("nvim-treesitter").install({
     "printf",
     "prisma",
     "python",
+    "qmljs",
     "query",
     "regex",
     "rust",
