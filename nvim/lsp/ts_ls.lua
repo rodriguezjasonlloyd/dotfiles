@@ -19,8 +19,10 @@ return {
         "typescript.tsx",
     },
     root_dir = function(bufnr, on_dir)
-        local project_root =
-            vim.fs.root(bufnr, { "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock" })
+        local project_root = vim.fs.root(
+            bufnr,
+            { "package.json", "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock" }
+        )
 
         if not project_root then
             return
