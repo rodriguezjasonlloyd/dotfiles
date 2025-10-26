@@ -29,6 +29,7 @@ require("mason-tool-installer").setup({
 
         "tombi",
         "qmlls",
+        "hyprls",
     },
 })
 
@@ -39,6 +40,7 @@ require("nvim-treesitter").install({
     "c",
     "diff",
     "html",
+    "hyprlang",
     "java",
     "javascript",
     "jsdoc",
