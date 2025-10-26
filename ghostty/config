@@ -1,0 +1,9 @@
+confirm-close-surface = false
+
+font-family = SauceCodePro Nerd Font Mono
+
+keybind = performable:ctrl+l=clear_screen
+
+window-padding-balance = true
+window-padding-x = 4
+window-padding-y = 4

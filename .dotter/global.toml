@@ -7,9 +7,14 @@ rio = "~/.config/rio"
 [alacritty.files]
 alacritty = "~/.config/alacritty"
 
-[shell.files]
-"starship.toml" = { if = "(is_executable \"starship\")", target = "~/.config/starship.toml", type = "symbolic" }
-"fastfetch.jsonc" = { if = "(is_executable \"fastfetch\")", target = "~/.config/fastfetch/config.jsonc", type = "symbolic" }
+[ghostty.files]
+ghostty = "~/.config/ghostty"
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"
+
+[fastfetch.files]
+"fastfetch.jsonc" = "~/.config/fastfetch/config.jsonc"
 
 [bash.files]
 bashrc = "~/.bashrc"
