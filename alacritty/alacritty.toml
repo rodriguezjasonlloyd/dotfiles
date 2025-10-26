@@ -4,12 +4,8 @@ size = 12
 
 [keyboard]
 bindings = [
-  { key = "M", mods = "Control|Shift", action = "ToggleMaximized" },
-  { key = "Q", mods = "Control|Shift", action = "Quit" },
+  { key = "L", mods = "Control", action = "ClearHistory" },
 ]
-
-[terminal]
-shell = { program = "pwsh", args = ["-WorkingDirectory", "~"] }
 
 [window]
 dimensions = { columns = 120, lines = 40 }
