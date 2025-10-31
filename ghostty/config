@@ -1,6 +1,6 @@
 confirm-close-surface = false
 
-font-family = SauceCodePro Nerd Font Mono
+font-family = Hack Nerd Font Mono
 
 keybind = performable:ctrl+l=clear_screen
 
