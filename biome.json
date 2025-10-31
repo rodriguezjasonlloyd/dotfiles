@@ -1,7 +1,13 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.6/schema.json",
-  "files": {
-    "maxSize": 2097152
+  "$schema": "https://biomejs.dev/schemas/2.3.1/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "on",
+        "useSortedAttributes": "on",
+        "useSortedKeys": "on"
+      }
+    }
   },
   "formatter": {
     "indentStyle": "space",
@@ -16,6 +22,13 @@
   "javascript": {
     "formatter": {
       "indentWidth": 4
+    }
+  },
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noUnknownTypeSelector": "off"
+      }
     }
   }
 }
