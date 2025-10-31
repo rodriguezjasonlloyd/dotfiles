@@ -4,6 +4,9 @@ uwsm = "~/.config/uwsm"
 [hypr.files]
 hypr = "~/.config/hypr"
 
+[waybar.files]
+waybar = "~/.config/waybar"
+
 [wezterm.files]
 wezterm = "~/.config/wezterm"
 
