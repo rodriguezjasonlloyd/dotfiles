@@ -7,9 +7,6 @@ hypr = "~/.config/hypr"
 [wezterm.files]
 wezterm = "~/.config/wezterm"
 
-[rio.files]
-rio = "~/.config/rio"
-
 [alacritty.files]
 alacritty = "~/.config/alacritty"
 

@@ -1,10 +1,3 @@
-[glzr.files]
-glazewm = "~/.glzr/glazewm"
-zebar = { target = "~/.glzr/zebar", type = "template" }
-
-[rio.files]
-rio = "~/AppData/Local/rio"
-
 [alacritty.files]
 alacritty = "~/AppData/Roaming/alacritty"
 
