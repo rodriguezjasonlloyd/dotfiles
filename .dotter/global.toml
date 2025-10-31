@@ -1,3 +1,6 @@
+[uwsm.files]
+uwsm = "~/.config/uwsm"
+
 [hypr.files]
 hypr = "~/.config/hypr"
 
@@ -23,6 +26,7 @@ ghostty = "~/.config/ghostty"
 bashrc = "~/.bashrc"
 
 [zsh.files]
+zprofile = "~/.zprofile"
 zshrc = "~/.zshrc"
 
 [yazi.files]
