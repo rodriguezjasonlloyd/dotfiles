@@ -7,6 +7,9 @@ hypr = "~/.config/hypr"
 [waybar.files]
 waybar = "~/.config/waybar"
 
+[mako.files]
+mako = "~/.config/mako"
+
 [wezterm.files]
 wezterm = "~/.config/wezterm"
 
