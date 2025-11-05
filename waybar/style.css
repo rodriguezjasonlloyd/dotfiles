@@ -69,13 +69,17 @@
   padding-right: 4px;
 }
 
+menu {
+  background: rgb(50, 50, 50);
+  color: #fff;
+}
+
 tooltip {
-  background: rgba(0, 0, 0, 1);
+  background: rgb(50, 50, 50);
   color: #fff;
 }
 
 tooltip label {
-  color: #fff;
   padding: 4px;
 }
 
