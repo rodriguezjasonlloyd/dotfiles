@@ -30,6 +30,8 @@ bashrc = "~/.bashrc"
 
 [zsh.files]
 zprofile = "~/.zprofile"
+zsh = "~/.zsh"
+zshenv = "~/.zshenv"
 zshrc = "~/.zshrc"
 
 [yazi.files]
