@@ -1,0 +1,15 @@
+servers:
+  - addr: matrixbackrooms.duckdns.org
+    port: 6667
+    tls: false
+    join: ["#backrooms"]
+    nicks: [ohirume]
+    realname: ohirume
+
+defaults:
+  nicks: [ohirume]
+  realname: ohirume
+  join: []
+  tls: true
+
+log_dir: "/home/ohirume/tiny_logs"
