@@ -37,10 +37,6 @@ conform.setup({
 
 vim.keymap.set({ "n", "v" }, "<leader>cf", conform.format, { desc = "Format Buffer", silent = true })
 
-vim.keymap.set({ "n", "v" }, "<leader>cl", function()
-    conform.format({ formatters = { "biome-check" } })
-end, { desc = "Lint Fix", silent = true })
-
 local lint = require("lint")
 
 lint.linters_by_ft = {
@@ -48,12 +44,14 @@ lint.linters_by_ft = {
     luau = { "selene" },
     javascript = { "biomejs" },
     javascriptreact = { "biomejs" },
-    typescript = { "biomejs" },
-    typescriptreact = { "biomejs" },
+    typescript = { "oxlint" },
+    typescriptreact = { "oxlint" },
     json = { "biomejs" },
     jsonc = { "biomejs" },
     python = { "ruff" },
 }
+
+lint.linters.oxlint.args = vim.list_extend(lint.linters.oxlint.args or {}, { "--type-aware" })
 
 vim.api.nvim_create_autocmd({ "BufEnter", "InsertLeave", "BufWritePost" }, {
     group = vim.api.nvim_create_augroup("Lint", { clear = true }),
