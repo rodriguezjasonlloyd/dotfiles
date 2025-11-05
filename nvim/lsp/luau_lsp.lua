@@ -38,5 +38,14 @@ return {
             "--no-flags-enabled",
         }, dispatchers)
     end,
-    settings = { ["luau-lsp"] = { completion = { imports = { enabled = true } } } },
+    settings = {
+        ["luau-lsp"] = {
+            completion = {
+                imports = {
+                    enabled = true,
+                    stringRequires = { enabled = true },
+                },
+            },
+        },
+    },
 }
