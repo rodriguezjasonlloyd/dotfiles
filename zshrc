@@ -1,5 +1,10 @@
 plugins=(git)
 
+fpath=(~/.zsh/completions $fpath)
+
+autoload -Uz compinit
+compinit
+
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}'
