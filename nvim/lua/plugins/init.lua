@@ -1,21 +1,12 @@
--- Visuals
-vim.pack.add({
+local plugins = {
     { src = "https://github.com/rose-pine/neovim" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
     { src = "https://github.com/MunifTanjim/nui.nvim" },
     { src = "https://github.com/nvim-lualine/lualine.nvim" },
     { src = "https://github.com/HiPhish/rainbow-delimiters.nvim" },
-}, { confirm = false })
-
--- Installers
-vim.pack.add({
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
-}, { confirm = false })
-
--- Editing
-vim.pack.add({
     { src = "https://github.com/stevearc/conform.nvim" },
     { src = "https://github.com/mfussenegger/nvim-lint" },
     { src = "https://github.com/folke/flash.nvim" },
@@ -25,10 +16,6 @@ vim.pack.add({
     { src = "https://github.com/RRethy/nvim-treesitter-endwise" },
     { src = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring" },
     { src = "https://github.com/folke/ts-comments.nvim" },
-}, { confirm = false })
-
--- Miscellaneous
-vim.pack.add({
     { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://github.com/folke/persistence.nvim" },
@@ -37,7 +24,24 @@ vim.pack.add({
     { src = "https://github.com/folke/snacks.nvim" },
     { src = "https://github.com/folke/noice.nvim" },
     { src = "https://github.com/OXY2DEV/markview.nvim" },
-}, { confirm = false })
+}
+
+local max_retries = 5
+local attempt = 0
+
+while attempt < max_retries do
+    attempt = attempt + 1
+
+    local ok = pcall(vim.pack.add, plugins, { confirm = false })
+
+    if ok then
+        break
+    end
+end
+
+if attempt == max_retries then
+    error(string.format("Failed to install plugins after %d retries", max_retries))
+end
 
 require("plugins.visuals")
 require("plugins.snacks")
