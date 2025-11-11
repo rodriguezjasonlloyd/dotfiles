@@ -8,29 +8,29 @@ local conform = require("conform")
 
 conform.setup({
     formatters_by_ft = {
-        html = { "biome" },
         css = { "biome" },
+        html = { "biome" },
+        java = { "google-java-format" },
         javascript = { "biome" },
         javascriptreact = { "biome" },
-        typescript = { "biome" },
-        typescriptreact = { "biome" },
         markdown = { "prettierd" },
         json = { "biome" },
         jsonc = { "biome" },
         yaml = { "prettierd" },
         lua = { "stylua" },
         luau = { "stylua" },
-        java = { "google-java-format" },
-        toml = { "tombi" },
-        rust = { "rustfmt" },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+        rust = { "rustfmt" },
+        toml = { "tombi" },
+        typescript = { "biome" },
+        typescriptreact = { "biome" },
     },
     formatters = {
         ["google-java-format"] = { prepend_args = { "--aosp" } },
     },
     default_format_opts = {
-        timeout_ms = 10000,
         lsp_format = "fallback",
+        timeout_ms = 10000,
     },
     format_on_save = true,
 })
@@ -40,15 +40,15 @@ vim.keymap.set({ "n", "v" }, "<leader>cf", conform.format, { desc = "Format Buff
 local lint = require("lint")
 
 lint.linters_by_ft = {
-    lua = { "selene" },
-    luau = { "selene" },
     javascript = { "biomejs" },
     javascriptreact = { "biomejs" },
-    typescript = { "oxlint" },
-    typescriptreact = { "oxlint" },
     json = { "biomejs" },
     jsonc = { "biomejs" },
+    lua = { "selene" },
+    luau = { "selene" },
     python = { "ruff" },
+    typescript = { "oxlint" },
+    typescriptreact = { "oxlint" },
 }
 
 lint.linters.oxlint.args = vim.list_extend(lint.linters.oxlint.args or {}, { "--type-aware" })
