@@ -1,5 +1,5 @@
 require("blink.cmp").setup({
-    fuzzy = { prebuilt_binaries = { force_version = "v1.6.0" } },
+    fuzzy = { prebuilt_binaries = { force_version = "v1.7.0" } },
     completion = { documentation = { auto_show = true } },
     keymap = { preset = "super-tab" },
 })
