@@ -1,36 +1,30 @@
-local mason = require("mason")
-mason.setup({})
+require("mason").setup({})
 
 require("mason-tool-installer").setup({
     ensure_installed = {
-        "luau-lsp",
-        "lua-language-server",
-        "stylua",
-        "selene",
-
-        "jdtls",
-        "lemminx",
+        "biome",
+        "eslint_d",
         "google-java-format",
-
+        "hyprls",
+        "jdtls",
+        "json-lsp",
+        "lemminx",
+        "lua-language-server",
+        "luau-lsp",
+        "oxlint",
+        "prisma-language-server",
         "pyrefly",
+        "qmlls",
         "ruff",
-
-        "typescript-language-server",
+        "rust-analyzer",
+        "selene",
+        "stylua",
         "superhtml",
         "tailwindcss-language-server",
-        "json-lsp",
-        "yaml-language-server",
-        "prisma-language-server",
-        "biome",
-        "oxlint",
-        "eslint_d",
-        "prettierd",
-
-        "rust-analyzer",
-
         "tombi",
-        "qmlls",
-        "hyprls",
+        "typescript-language-server",
+        "yaml-language-server",
+        "yamlfmt",
     },
 })
 
