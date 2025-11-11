@@ -16,6 +16,7 @@ require("mason-tool-installer").setup({
         "pyrefly",
         "qmlls",
         "ruff",
+        "rumdl",
         "rust-analyzer",
         "selene",
         "stylua",

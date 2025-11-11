@@ -19,6 +19,7 @@ conform.setup({
         yaml = { "prettierd" },
         lua = { "stylua" },
         luau = { "stylua" },
+        markdown = { "rumdl" },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
         rust = { "rustfmt" },
         toml = { "tombi" },
@@ -27,6 +28,7 @@ conform.setup({
     },
     formatters = {
         ["google-java-format"] = { prepend_args = { "--aosp" } },
+        rumdl = { command = "rumdl", args = { "fmt", "-" } },
     },
     default_format_opts = {
         lsp_format = "fallback",
