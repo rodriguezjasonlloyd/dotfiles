@@ -77,13 +77,10 @@ return {
     },
     filetypes = { "java" },
     root_markers = {
-        ".git",
-        "build.gradle",
-        "build.gradle.kts",
-        "build.xml", -- Ant
-        "pom.xml", -- Maven
-        "settings.gradle", -- Gradle
-        "settings.gradle.kts", -- Gradle
+        "build.xml",
+        "pom.xml",
+        "settings.gradle",
+        "settings.gradle.kts",
     },
     init_options = {
         workspace = get_jdtls_workspace_dir(),
