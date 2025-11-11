@@ -1,0 +1,105 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "40380e7",
+      "src": "https://github.com/saghen/blink.cmp"
+    },
+    "conform.nvim": {
+      "rev": "cde4da5",
+      "src": "https://github.com/stevearc/conform.nvim"
+    },
+    "cord.nvim": {
+      "rev": "1af0ff6",
+      "src": "https://github.com/vyfor/cord.nvim"
+    },
+    "flash.nvim": {
+      "rev": "fcea7ff",
+      "src": "https://github.com/folke/flash.nvim"
+    },
+    "gitsigns.nvim": {
+      "rev": "20ad441",
+      "src": "https://github.com/lewis6991/gitsigns.nvim"
+    },
+    "lualine.nvim": {
+      "rev": "3946f01",
+      "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "markview.nvim": {
+      "rev": "31f9a26",
+      "src": "https://github.com/OXY2DEV/markview.nvim"
+    },
+    "mason-tool-installer.nvim": {
+      "rev": "517ef59",
+      "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
+    },
+    "mason.nvim": {
+      "rev": "ad7146a",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "neovim": {
+      "rev": "eb3ff49",
+      "src": "https://github.com/rose-pine/neovim"
+    },
+    "noice.nvim": {
+      "rev": "7bfd942",
+      "src": "https://github.com/folke/noice.nvim"
+    },
+    "nui.nvim": {
+      "rev": "de74099",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
+    "nvim-autopairs": {
+      "rev": "7a2c97c",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
+    "nvim-lint": {
+      "rev": "8b349e8",
+      "src": "https://github.com/mfussenegger/nvim-lint"
+    },
+    "nvim-treesitter": {
+      "rev": "81aec1e4",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'main'"
+    },
+    "nvim-treesitter-endwise": {
+      "rev": "a61a9de",
+      "src": "https://github.com/RRethy/nvim-treesitter-endwise"
+    },
+    "nvim-ts-autotag": {
+      "rev": "c4ca798",
+      "src": "https://github.com/windwp/nvim-ts-autotag"
+    },
+    "nvim-ts-context-commentstring": {
+      "rev": "1b212c2",
+      "src": "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+    },
+    "nvim-web-devicons": {
+      "rev": "8dcb311",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "oil.nvim": {
+      "rev": "7e1cd77",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "persistence.nvim": {
+      "rev": "b20b2a7",
+      "src": "https://github.com/folke/persistence.nvim"
+    },
+    "rainbow-delimiters.nvim": {
+      "rev": "8aafe2c",
+      "src": "https://github.com/HiPhish/rainbow-delimiters.nvim"
+    },
+    "snacks.nvim": {
+      "rev": "dec29f5",
+      "src": "https://github.com/folke/snacks.nvim"
+    },
+    "ts-comments.nvim": {
+      "rev": "123a9fb",
+      "src": "https://github.com/folke/ts-comments.nvim"
+    },
+    "which-key.nvim": {
+      "rev": "3aab214",
+      "src": "https://github.com/folke/which-key.nvim"
+    }
+  }
+}
