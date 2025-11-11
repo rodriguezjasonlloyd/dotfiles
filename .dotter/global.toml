@@ -42,3 +42,6 @@ nvim = "~/.config/nvim"
 
 [walker.files]
 walker = "~/.config/walker"
+
+[tiny.files]
+tiny = "~/.config/tiny"
