@@ -5,6 +5,7 @@ local plugins = {
     { src = "https://github.com/OXY2DEV/markview.nvim" },
     { src = "https://github.com/RRethy/nvim-treesitter-endwise" },
     { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
+    { src = "https://github.com/benomahony/oil-git.nvim" },
     { src = "https://github.com/folke/flash.nvim" },
     { src = "https://github.com/folke/noice.nvim" },
     { src = "https://github.com/folke/persistence.nvim" },
