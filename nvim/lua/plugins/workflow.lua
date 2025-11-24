@@ -25,12 +25,13 @@ end
 local oil = require("oil")
 
 oil.setup({
-    skip_confirm_for_simple_edits = true,
     constrain_cursor = "name",
     float = {
-        padding = 4,
+        border = "solid",
         max_width = 0.6,
+        padding = 4,
     },
+    skip_confirm_for_simple_edits = true,
 })
 
 vim.keymap.set("n", "\\", oil.toggle_float, { desc = "Toggle Oil Float", silent = true })
