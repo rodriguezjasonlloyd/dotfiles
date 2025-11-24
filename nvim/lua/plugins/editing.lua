@@ -46,6 +46,7 @@ lint.linters_by_ft = {
     jsonc = { "biomejs" },
     lua = { "selene" },
     luau = { "selene" },
+    markdown = { "rumdl" },
     python = { "ruff" },
     typescript = { "oxlint" },
     typescriptreact = { "oxlint" },
