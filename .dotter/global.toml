@@ -34,6 +34,9 @@ zsh = "~/.zsh"
 zshenv = "~/.zshenv"
 zshrc = "~/.zshrc"
 
+[mime.files]
+"mimeapps.list" = "~/.config/mimeapps.list"
+
 [yazi.files]
 yazi = "~/.config/yazi"
 
