@@ -40,19 +40,23 @@ conform.setup({
 
 vim.keymap.set({ "n", "v" }, "<leader>cf", conform.format, { desc = "Format Buffer", silent = true })
 
+vim.keymap.set({ "n", "v" }, "<leader>cl", function()
+    conform.format({ formatters = { "eslint_d" } })
+end, { desc = "Fix Lints", silent = true })
+
 local lint = require("lint")
 
 lint.linters_by_ft = {
-    javascript = { "biomejs" },
-    javascriptreact = { "biomejs" },
+    javascript = { "eslint_d" },
+    javascriptreact = { "eslint_d" },
     json = { "biomejs" },
     jsonc = { "biomejs" },
     lua = { "selene" },
     luau = { "selene" },
     markdown = { "rumdl" },
     python = { "ruff" },
-    typescript = { "oxlint" },
-    typescriptreact = { "oxlint" },
+    typescript = { "eslint_d" },
+    typescriptreact = { "eslint_d" },
 }
 
 lint.linters.oxlint.args = vim.list_extend(lint.linters.oxlint.args or {}, { "--type-aware" })
