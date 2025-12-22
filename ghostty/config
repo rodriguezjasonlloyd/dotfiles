@@ -7,3 +7,5 @@ keybind = performable:ctrl+l=clear_screen
 window-padding-balance = true
 window-padding-x = 4
 window-padding-y = 4
+
+theme = evergarden-winter-blue.yml
