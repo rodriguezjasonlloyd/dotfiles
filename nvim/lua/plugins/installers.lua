@@ -14,6 +14,7 @@ require("mason-tool-installer").setup({
         "lua-language-server",
         "luau-lsp",
         "oxlint",
+        "prettierd",
         "prisma-language-server",
         "pyrefly",
         "qmlls",
