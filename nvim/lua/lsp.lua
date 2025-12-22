@@ -1,4 +1,5 @@
 vim.lsp.enable({
+    "bashls",
     "biome",
     "hyprls",
     "jdtls",

@@ -8,6 +8,7 @@ local conform = require("conform")
 
 conform.setup({
     formatters_by_ft = {
+        bash = { "shellharden" },
         css = { "biome" },
         html = { "biome" },
         java = { "google-java-format" },

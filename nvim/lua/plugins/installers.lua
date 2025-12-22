@@ -2,6 +2,7 @@ require("mason").setup({})
 
 require("mason-tool-installer").setup({
     ensure_installed = {
+        "bash-language-server",
         "biome",
         "eslint_d",
         "google-java-format",
@@ -19,6 +20,7 @@ require("mason-tool-installer").setup({
         "rumdl",
         "rust-analyzer",
         "selene",
+        "shellharden",
         "stylua",
         "superhtml",
         "tailwindcss-language-server",
