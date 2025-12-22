@@ -4,6 +4,7 @@ require("mason-tool-installer").setup({
     ensure_installed = {
         "bash-language-server",
         "biome",
+        "css-lsp",
         "eslint_d",
         "google-java-format",
         "hyprls",
@@ -36,6 +37,7 @@ vim.keymap.set("n", "<leader>m", ":Mason<CR>", { silent = true, desc = "Open Mas
 require("nvim-treesitter").install({
     "bash",
     "c",
+    "css",
     "diff",
     "html",
     "hyprlang",
