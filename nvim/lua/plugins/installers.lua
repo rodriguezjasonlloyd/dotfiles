@@ -68,4 +68,5 @@ require("nvim-treesitter").install({
     "xml",
     "yaml",
     "yuck",
+    "zsh",
 })
