@@ -5,9 +5,6 @@ eww = "~/.config/eww"
 [waybar.files]
 waybar = "~/.config/waybar"
 
-[mako.files]
-mako = "~/.config/mako"
-
 [wezterm.files]
 wezterm = "~/.config/wezterm"
 
