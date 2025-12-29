@@ -62,8 +62,7 @@
     },
     "nvim-treesitter": {
       "rev": "3bbae7b3",
-      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
-      "version": "'main'"
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-endwise": {
       "rev": "a61a9de",
