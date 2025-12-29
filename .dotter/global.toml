@@ -1,6 +1,3 @@
-[uwsm.files]
-uwsm = "~/.config/uwsm"
-
 [hypr.files]
 hypr = "~/.config/hypr"
 

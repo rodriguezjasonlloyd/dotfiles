@@ -1,2 +1,0 @@
-export HYPRSHOT_DIR="$HOME/Pictures/screenshots"
-export QT_QPA_PLATFORMTHEME=qt5ct
