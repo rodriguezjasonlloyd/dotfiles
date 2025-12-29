@@ -17,6 +17,7 @@ foot = "~/.config/foot"
 "fastfetch.jsonc" = "~/.config/fastfetch/config.jsonc"
 
 [bash.files]
+bash_profile = "~/.bash_profile"
 bashrc = "~/.bashrc"
 
 [zsh.files]
