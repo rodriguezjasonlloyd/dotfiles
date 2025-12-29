@@ -19,6 +19,9 @@ wezterm = "~/.config/wezterm"
 [alacritty.files]
 alacritty = "~/.config/alacritty"
 
+[foot.files]
+foot = "~/.config/foot"
+
 [ghostty.files]
 ghostty = "~/.config/ghostty"
 
