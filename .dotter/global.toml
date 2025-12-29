@@ -1,3 +1,5 @@
+[niri.files]
+niri = "~/.config/niri"
 
 [eww.files]
 eww = "~/.config/eww"
