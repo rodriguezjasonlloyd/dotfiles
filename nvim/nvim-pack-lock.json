@@ -48,6 +48,10 @@
       "rev": "de74099",
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
+    "nvim": {
+      "rev": "ed86852e01f03853326c68961ff10bcaf8ff5f9c",
+      "src": "https://github.com/everviolet/nvim"
+    },
     "nvim-autopairs": {
       "rev": "7a2c97c",
       "src": "https://github.com/windwp/nvim-autopairs"
