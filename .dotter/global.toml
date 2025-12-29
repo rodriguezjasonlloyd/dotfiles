@@ -32,7 +32,6 @@ ghostty = "~/.config/ghostty"
 bashrc = "~/.bashrc"
 
 [zsh.files]
-zprofile = "~/.zprofile"
 zshenv = "~/.zshenv"
 zshrc = "~/.zshrc"
 
