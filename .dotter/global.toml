@@ -8,9 +8,6 @@ waybar = "~/.config/waybar"
 [foot.files]
 foot = "~/.config/foot"
 
-[ghostty.files]
-ghostty = "~/.config/ghostty"
-
 [starship.files]
 "starship.toml" = "~/.config/starship.toml"
 
