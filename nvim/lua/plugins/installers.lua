@@ -27,6 +27,7 @@ require("mason-tool-installer").setup({
         "superhtml",
         "tailwindcss-language-server",
         "tombi",
+        "tsgo",
         "typescript-language-server",
         "yaml-language-server",
         "yamlfmt",

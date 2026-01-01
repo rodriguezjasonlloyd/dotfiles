@@ -17,6 +17,7 @@ vim.lsp.enable({
     "tailwindcss",
     "tombi",
     "ts_ls",
+    "tsgo",
     "yamlls",
 })
 
