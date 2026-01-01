@@ -7,6 +7,9 @@ quickshell = "~/.config/quickshell"
 [waybar.files]
 waybar = "~/.config/waybar"
 
+[wpaperd.files]
+wpaperd = "~/.config/wpaperd"
+
 [foot.files]
 foot = "~/.config/foot"
 
