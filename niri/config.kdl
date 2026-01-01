@@ -189,8 +189,8 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Ctrl+Alt+Delete { quit; }
-    Ctrl+Alt+BackSpace { spawn-sh "loginctl poweroff"; }
-    Ctrl+Alt+R { spawn-sh "loginctl reboot"; }
+    Ctrl+Alt+BackSpace { spawn-sh "poweroff"; }
+    Ctrl+Alt+R { spawn-sh "reboot"; }
 
     Mod+Shift+P { power-off-monitors; }
 }
