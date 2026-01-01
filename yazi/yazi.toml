@@ -1,3 +1,15 @@
 [mgr]
 sort_by = "natural"
 linemode = "size"
+
+[opener]
+open_image = [
+  { run = "xdg-open %s", desc = "Open" },
+  { run = "satty -f %s", desc = "Annotate" },
+  { run = "exiftool %s", desc = "Show Metadata" }
+]
+
+[open]
+prepend_rules = [
+  { mime = "image/*", use = "open_image" },
+]
