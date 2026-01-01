@@ -1,4 +1,5 @@
 spawn-at-startup "pipewire"
+spawn-at-startup "quickshell"
 spawn-at-startup "wpaperd"
 
 input {
@@ -37,9 +38,9 @@ layout {
     center-focused-column "never"
 
     focus-ring {
-        width 2
-        active-color "#7fc8ff"
-        inactive-color "#505050"
+        width 1
+        active-color "#f8f9e8"
+        inactive-color "#1e2528"
     }
 
     border {
@@ -66,8 +67,11 @@ binds {
     Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
     Mod+Space hotkey-overlay-title="Open Fuzzel" { spawn "fuzzel"; }
 
-    Mod+Shift+B hotkey-overlay-title="Open Browser" { spawn "zen"; }
-    Mod+Shift+D hotkey-overlay-title="Open Discord" { spawn "discord"; }
+    Mod+E hotkey-overlay-title="Open File Explorer" { spawn-sh "foot -e yazi"; }
+    Mod+T hotkey-overlay-title="Open TOP" { spawn-sh "foot -e btop"; }
+
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "zen"; }
+    Mod+D hotkey-overlay-title="Open Discord" { spawn "discord"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
@@ -112,17 +116,11 @@ binds {
 
     Mod+Page_Down      { focus-workspace-down; }
     Mod+Page_Up        { focus-workspace-up; }
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-    Mod+Ctrl+U         { move-column-to-workspace-down; }
-    Mod+Ctrl+I         { move-column-to-workspace-up; }
 
     Mod+Shift+Page_Down { move-workspace-down; }
     Mod+Shift+Page_Up   { move-workspace-up; }
-    Mod+Shift+U         { move-workspace-down; }
-    Mod+Shift+I         { move-workspace-up; }
 
     Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
@@ -191,8 +189,9 @@ binds {
 
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
+    Ctrl+Alt+BackSpace { spawn-sh "loginctl poweroff"; }
+    Ctrl+Alt+R { spawn-sh "loginctl reboot"; }
 
     Mod+Shift+P { power-off-monitors; }
 }
