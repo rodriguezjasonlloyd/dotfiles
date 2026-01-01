@@ -8,7 +8,7 @@ local conform = require("conform")
 
 conform.setup({
     formatters_by_ft = {
-        bash = { "shellharden" },
+        bash = { "shellharden", "beautysh" },
         css = { "biome" },
         html = { "biome" },
         java = { "google-java-format" },
@@ -22,10 +22,11 @@ conform.setup({
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
         rust = { "rustfmt" },
         scss = { "prettierd" },
-        sh = { "shellharden" },
+        sh = { "shellharden", "beautysh" },
         toml = { "tombi" },
         typescript = { "prettierd" },
         typescriptreact = { "prettierd" },
+        zsh = { "beautysh" },
     },
     formatters = {
         ["google-java-format"] = { prepend_args = { "--aosp" } },

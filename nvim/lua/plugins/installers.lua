@@ -3,6 +3,7 @@ require("mason").setup({})
 require("mason-tool-installer").setup({
     ensure_installed = {
         "bash-language-server",
+        "beautysh",
         "biome",
         "css-lsp",
         "eslint_d",
