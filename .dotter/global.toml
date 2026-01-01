@@ -1,8 +1,6 @@
 [niri.files]
 niri = "~/.config/niri"
 
-[eww.files]
-eww = "~/.config/eww"
 
 [waybar.files]
 waybar = "~/.config/waybar"
