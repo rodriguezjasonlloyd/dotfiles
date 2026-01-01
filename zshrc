@@ -1,5 +1,14 @@
 plugins=(git)
 
+osc7_cwd() {
+    local hostname="${HOST:-$(hostname)}"
+    local url_path="${PWD// /%20}"
+    printf "\033]7;file://%s%s\033\\" "$hostname" "$url_path"
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd osc7_cwd
+
 autoload -Uz compinit
 compinit
 
