@@ -1,4 +1,3 @@
-spawn-at-startup "pipewire"
 spawn-at-startup "quickshell"
 spawn-at-startup "wpaperd"
 
@@ -70,7 +69,7 @@ binds {
     Mod+E hotkey-overlay-title="Open File Explorer" { spawn-sh "foot -e yazi"; }
     Mod+T hotkey-overlay-title="Open TOP" { spawn-sh "foot -e btop"; }
 
-    Mod+B hotkey-overlay-title="Open Browser" { spawn "zen"; }
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
     Mod+D hotkey-overlay-title="Open Discord" { spawn "discord"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
