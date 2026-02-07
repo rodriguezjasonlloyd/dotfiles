@@ -79,8 +79,6 @@ return {
             "theme/static_src/tailwind.config.mjs",
             "theme/static_src/tailwind.config.ts",
             "theme/static_src/postcss.config.js",
-
-            ".git",
         }
 
         local fname = vim.api.nvim_buf_get_name(bufnr)
