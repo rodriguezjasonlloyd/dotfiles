@@ -30,7 +30,6 @@ conform.setup({
     },
     formatters = {
         ["google-java-format"] = { prepend_args = { "--aosp" } },
-        rumdl = { command = "rumdl", args = { "fmt", "-" } },
     },
     default_format_opts = {
         lsp_format = "fallback",
