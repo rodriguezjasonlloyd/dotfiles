@@ -1,7 +1,7 @@
 [[ $- != *i* ]] && return
 
 export EDITOR=nvim
-. "$HOME/.rokit/env"
+export PATH="$HOME/.rokit/bin:$PATH"
 
 alias ls='eza --icons -F -H --group-directories-first --git -1'
 alias ll='eza --icons -F -H --group-directories-first --git -1 -alF'
