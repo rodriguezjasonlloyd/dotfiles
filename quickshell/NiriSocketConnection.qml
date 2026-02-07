@@ -10,30 +10,32 @@ Singleton {
     signal eventReceived(var event)
 
     property Socket socket: Socket {
-        connected: true
         id: socket
+        connected: true
         path: Quickshell.env("NIRI_SOCKET")
         parser: SplitParser {
-            onRead: function(data) {
+            onRead: function (data) {
                 if (data.trim() === "") {
-                    return
+                    return;
                 }
 
                 try {
-                    root.eventReceived(JSON.parse(data))
+                    root.eventReceived(JSON.parse(data));
                 } catch (error) {
-                    console.error("Failed to parse event:", data, error)
+                    console.error("Failed to parse event:", data, error);
                 }
             }
         }
     }
 
     function sendRequest(request) {
-        socket.write(JSON.stringify(request) + "\n")
-        socket.flush()
+        socket.write(JSON.stringify(request) + "\n");
+        socket.flush();
     }
 
     Component.onCompleted: {
-        sendRequest({"EventStream": null})
+        sendRequest({
+            "EventStream": null
+        });
     }
 }

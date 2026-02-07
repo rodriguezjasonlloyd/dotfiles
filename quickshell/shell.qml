@@ -4,8 +4,8 @@ import Quickshell.Io
 
 ShellRoot {
     PanelWindow {
-        color: "#1e1e1e"
         id: panel
+        color: "#1e1e1e"
         implicitHeight: 24
 
         anchors {
@@ -25,17 +25,17 @@ ShellRoot {
             stdout: SplitParser {
                 onRead: data => {
                     if (!data) {
-                        return
+                        return;
                     }
 
-                    var p = data.trim().split(/\s+/)
-                    var idle = parseInt(p[4]) + parseInt(p[5])
-                    var total = p.slice(1, 8).reduce((a, b) => a + parseInt(b), 0)
+                    var p = data.trim().split(/\s+/);
+                    var idle = parseInt(p[4]) + parseInt(p[5]);
+                    var total = p.slice(1, 8).reduce((a, b) => a + parseInt(b), 0);
                     if (panel.lastCpuTotal > 0) {
-                        panel.cpuUsage = Math.round(100 * (1 - (idle - panel.lastCpuIdle) / (total - panel.lastCpuTotal)))
+                        panel.cpuUsage = Math.round(100 * (1 - (idle - panel.lastCpuIdle) / (total - panel.lastCpuTotal)));
                     }
-                    panel.lastCpuTotal = total
-                    panel.lastCpuIdle = idle
+                    panel.lastCpuTotal = total;
+                    panel.lastCpuIdle = idle;
                 }
             }
             Component.onCompleted: running = true
@@ -46,11 +46,12 @@ ShellRoot {
             command: ["sh", "-c", "free | grep Mem"]
             stdout: SplitParser {
                 onRead: data => {
-                    if (!data) return
-                    var parts = data.trim().split(/\s+/)
-                    var total = parseInt(parts[1]) || 1
-                    var used = parseInt(parts[2]) || 0
-                    panel.memUsage = Math.round(100 * used / total)
+                    if (!data)
+                        return;
+                    var parts = data.trim().split(/\s+/);
+                    var total = parseInt(parts[1]) || 1;
+                    var used = parseInt(parts[2]) || 0;
+                    panel.memUsage = Math.round(100 * used / total);
                 }
             }
             Component.onCompleted: running = true
@@ -61,10 +62,10 @@ ShellRoot {
             running: true
             repeat: true
             onTriggered: {
-                cpuProc.running = true
-                memProc.running = true
+                cpuProc.running = true;
+                memProc.running = true;
             }
-        } 
+        }
 
         Row {
             anchors.left: parent.left
@@ -101,15 +102,13 @@ ShellRoot {
 
                     Text {
                         text: "CPU: " + panel.cpuUsage + "%"
-                        color: panel.cpuUsage > 80 ? "#ff6b6b" : 
-                        panel.cpuUsage > 50 ? "#ffd93d" : "#6bcf7f"
+                        color: panel.cpuUsage > 80 ? "#ff6b6b" : panel.cpuUsage > 50 ? "#ffd93d" : "#6bcf7f"
                         font.pixelSize: 11
                     }
 
                     Text {
                         text: "RAM: " + panel.memUsage + "%"
-                        color: panel.memUsage > 80 ? "#ff6b6b" : 
-                        panel.memUsage > 50 ? "#ffd93d" : "#6bcf7f"
+                        color: panel.memUsage > 80 ? "#ff6b6b" : panel.memUsage > 50 ? "#ffd93d" : "#6bcf7f"
                         font.pixelSize: 11
                     }
                 }
@@ -123,11 +122,11 @@ ShellRoot {
         }
 
         Text {
+            id: dateText
             anchors.right: parent.right
             anchors.rightMargin: 8
             anchors.verticalCenter: parent.verticalCenter
             color: "white"
-            id: dateText
             text: Qt.formatDateTime(new Date(), "MM/dd/yy - hh:mm")
 
             Timer {
