@@ -1,9 +1,6 @@
 [niri.files]
 niri = "~/.config/niri"
 
-[quickshell.files]
-quickshell = "~/.config/quickshell"
-
 [waybar.files]
 waybar = "~/.config/waybar"
 
