@@ -1,7 +1,4 @@
-require("nvim-autopairs").setup({
-    fast_wrap = {},
-})
-
+require("nvim-autopairs").setup({ fast_wrap = {} })
 require("nvim-ts-autotag").setup({})
 
 local flash = require("flash")
