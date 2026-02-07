@@ -14,8 +14,8 @@ conform.setup({
         java = { "google-java-format" },
         javascript = { "prettierd" },
         javascriptreact = { "prettierd" },
-        json = { "biome" },
-        jsonc = { "biome" },
+        json = { "oxfmt" },
+        jsonc = { "oxfmt" },
         lua = { "stylua" },
         luau = { "stylua" },
         markdown = { "rumdl" },
@@ -24,8 +24,8 @@ conform.setup({
         scss = { "prettierd" },
         sh = { "shellharden", "beautysh" },
         toml = { "tombi" },
-        typescript = { "prettierd" },
-        typescriptreact = { "prettierd" },
+        typescript = { "oxfmt" },
+        typescriptreact = { "oxfmt" },
         zsh = { "beautysh" },
     },
     formatters = {
@@ -42,7 +42,7 @@ conform.setup({
 vim.keymap.set({ "n", "v" }, "<leader>cf", conform.format, { desc = "Format Buffer", silent = true })
 
 vim.keymap.set({ "n", "v" }, "<leader>cl", function()
-    conform.format({ formatters = { "eslint_d" } })
+    conform.format({ formatters = { "oxlint" } })
 end, { desc = "Fix Lints", silent = true })
 
 local lint = require("lint")
@@ -56,8 +56,8 @@ lint.linters_by_ft = {
     luau = { "selene" },
     markdown = { "rumdl" },
     python = { "ruff" },
-    typescript = { "eslint_d" },
-    typescriptreact = { "eslint_d" },
+    typescript = { "oxlint" },
+    typescriptreact = { "oxlint" },
 }
 
 lint.linters.oxlint.args = vim.list_extend(lint.linters.oxlint.args or {}, { "--type-aware" })

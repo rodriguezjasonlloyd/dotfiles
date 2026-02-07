@@ -15,6 +15,7 @@ require("mason-tool-installer").setup({
         "lemminx",
         "lua-language-server",
         "luau-lsp",
+        "oxfmt",
         "oxlint",
         "prettierd",
         "prisma-language-server",
