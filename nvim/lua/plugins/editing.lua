@@ -21,6 +21,7 @@ conform.setup({
         luau = { "stylua" },
         markdown = { "rumdl" },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+        qml = { "qmlformat" },
         rust = { "rustfmt" },
         scss = { "oxfmt" },
         sh = { "shellharden", "beautysh" },
