@@ -1,6 +1,7 @@
 vim.lsp.enable({
     "bashls",
     "cssls",
+    "biome",
     "docker_language_server",
     "hyprls",
     "jdtls",
