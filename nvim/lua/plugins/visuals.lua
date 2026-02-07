@@ -41,9 +41,12 @@ require("lualine").setup({
         lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = { { "filename", path = 4 } },
         lualine_x = {
-            { "encoding" },
+            {
+                function()
+                    return vim.fn.reg_recording()
+                end,
+            },
             { "fileformat" },
-            { "filetype", icon_only = true },
             {
                 function()
                     local _, client = next(vim.lsp.get_clients({ bufnr = 0 }))
@@ -58,7 +61,6 @@ require("lualine").setup({
             },
         },
         lualine_y = {
-            { "progress", separator = "", padding = { left = 1, right = 0 } },
             { "location", padding = { left = 0, right = 1 } },
         },
         lualine_z = {
