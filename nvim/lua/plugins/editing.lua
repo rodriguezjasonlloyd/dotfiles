@@ -54,7 +54,7 @@ lint.linters_by_ft = {
     lua = { "selene" },
     luau = { "selene" },
     markdown = { "rumdl" },
-    python = { "ruff" },
+    python = { "pyrefly", "ruff" },
     typescript = { "oxlint" },
     typescriptreact = { "oxlint" },
 }
