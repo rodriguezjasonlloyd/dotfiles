@@ -1,2 +1,2 @@
 export EDITOR=nvim
-. "$HOME/.rokit/env"
+export PATH="$HOME/.rokit/bin:$PATH"
