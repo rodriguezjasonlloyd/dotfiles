@@ -12,6 +12,7 @@ input {
         tap
         natural-scroll
         accel-profile "flat"
+        scroll-factor 0.25
     }
 
     mouse {
@@ -70,7 +71,7 @@ binds {
     Mod+T hotkey-overlay-title="Open TOP" { spawn-sh "foot -e btop"; }
 
     Mod+B hotkey-overlay-title="Open Browser" { spawn "zen-browser"; }
-    Mod+D hotkey-overlay-title="Open Discord" { spawn "discord"; }
+    Mod+D hotkey-overlay-title="Open Discord" { spawn "gtk-launch" "discord"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
