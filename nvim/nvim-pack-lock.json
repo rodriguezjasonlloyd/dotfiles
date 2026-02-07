@@ -1,111 +1,107 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "74967d4",
+      "rev": "f9e855c4d96e1264f7c818844f5a0166ad48c212",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "conform.nvim": {
-      "rev": "6208aef",
+      "rev": "c2526f1cde528a66e086ab1668e996d162c75f4f",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "cord.nvim": {
-      "rev": "1af0ff6",
+      "rev": "58f129ee5ea16cada145296d802331d8d91a67e4",
       "src": "https://github.com/vyfor/cord.nvim"
     },
     "flash.nvim": {
-      "rev": "fcea7ff",
+      "rev": "fcea7ff883235d9024dc41e638f164a450c14ca2",
       "src": "https://github.com/folke/flash.nvim"
     },
     "gitsigns.nvim": {
-      "rev": "cdafc32",
+      "rev": "1ce96a464fdbc24208e24c117e2021794259005d",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "lualine.nvim": {
-      "rev": "47f91c4",
+      "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
     },
     "markview.nvim": {
-      "rev": "1cc5d64",
+      "rev": "9e852c299351fc2110e763edc7fc899358ee112e",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mason-tool-installer.nvim": {
-      "rev": "517ef59",
+      "rev": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc",
       "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
     },
     "mason.nvim": {
-      "rev": "57e5a8a",
+      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
       "src": "https://github.com/mason-org/mason.nvim"
     },
-    "neovim": {
-      "rev": "cf2a288",
-      "src": "https://github.com/rose-pine/neovim"
-    },
     "noice.nvim": {
-      "rev": "7bfd942",
+      "rev": "7bfd942445fb63089b59f97ca487d605e715f155",
       "src": "https://github.com/folke/noice.nvim"
     },
     "nui.nvim": {
-      "rev": "de74099",
+      "rev": "de740991c12411b663994b2860f1a4fd0937c130",
       "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim": {
-      "rev": "ed86852e01f03853326c68961ff10bcaf8ff5f9c",
+      "rev": "d809abf3c5a213bc27962ac6296196ef5126b528",
       "src": "https://github.com/everviolet/nvim"
     },
     "nvim-autopairs": {
-      "rev": "7a2c97c",
+      "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
       "src": "https://github.com/windwp/nvim-autopairs"
     },
     "nvim-lint": {
-      "rev": "d111879",
+      "rev": "bcd1a44edbea8cd473af7e7582d3f7ffc60d8e81",
       "src": "https://github.com/mfussenegger/nvim-lint"
     },
     "nvim-treesitter": {
-      "rev": "3bbae7b3",
+      "rev": "45a07f869b0cffba342276f2c77ba7c116d35db8",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "nvim-treesitter-endwise": {
-      "rev": "a61a9de",
+      "rev": "8fe8a95630f4f2c72a87ba1927af649e0bfaa244",
       "src": "https://github.com/RRethy/nvim-treesitter-endwise"
     },
     "nvim-ts-autotag": {
-      "rev": "c4ca798",
+      "rev": "8e1c0a389f20bf7f5b0dd0e00306c1247bda2595",
       "src": "https://github.com/windwp/nvim-ts-autotag"
     },
     "nvim-ts-context-commentstring": {
-      "rev": "1b212c2",
+      "rev": "1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f",
       "src": "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
     },
     "nvim-web-devicons": {
-      "rev": "8dcb311",
+      "rev": "746ffbb17975ebd6c40142362eee1b0249969c5c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "oil-git.nvim": {
-      "rev": "d1f27a5",
+      "rev": "d1f27a5982df35b70fb842aa6bbfac10735c7265",
       "src": "https://github.com/benomahony/oil-git.nvim"
     },
     "oil.nvim": {
-      "rev": "01cb3a8",
+      "rev": "f55b25e493a7df76371cfadd0ded5004cb9cd48a",
       "src": "https://github.com/stevearc/oil.nvim"
     },
     "persistence.nvim": {
-      "rev": "b20b2a7",
+      "rev": "b20b2a7887bd39c1a356980b45e03250f3dce49c",
       "src": "https://github.com/folke/persistence.nvim"
     },
     "rainbow-delimiters.nvim": {
-      "rev": "8aafe2c",
+      "rev": "d6b802552cbe7d643a3b6b31f419c248d1f1e220",
       "src": "https://github.com/HiPhish/rainbow-delimiters.nvim"
     },
     "snacks.nvim": {
-      "rev": "fe7cfe9",
+      "rev": "fe7cfe9800a182274d0f868a74b7263b8c0c020b",
       "src": "https://github.com/folke/snacks.nvim"
     },
     "ts-comments.nvim": {
-      "rev": "123a9fb",
+      "rev": "123a9fb12e7229342f807ec9e6de478b1102b041",
       "src": "https://github.com/folke/ts-comments.nvim"
     },
     "which-key.nvim": {
-      "rev": "3aab214",
+      "rev": "3aab2147e74890957785941f0c1ad87d0a44c15a",
       "src": "https://github.com/folke/which-key.nvim"
     }
   }
