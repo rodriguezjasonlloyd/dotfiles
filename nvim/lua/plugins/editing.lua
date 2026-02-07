@@ -49,9 +49,10 @@ end, { desc = "Fix Lints", silent = true })
 local lint = require("lint")
 
 lint.linters_by_ft = {
-    javascript = { "eslint_d" },
-    javascriptreact = { "eslint_d" },
+    javascript = { "oxlint" },
+    javascriptreact = { "oxlint" },
     json = { "biomejs" },
+    json5 = { "biomejs" },
     jsonc = { "biomejs" },
     lua = { "selene" },
     luau = { "selene" },
