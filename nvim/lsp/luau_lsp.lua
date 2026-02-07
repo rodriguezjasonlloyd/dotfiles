@@ -1,8 +1,12 @@
+local luau_directory = vim.fs.joinpath(vim.fn.stdpath("data"), "luau")
+local definitions = vim.fs.joinpath(luau_directory, "types.d.luau")
+local docs = vim.fs.joinpath(luau_directory, "docs.json")
+
 ---@type vim.lsp.Config
 return {
     filetypes = { "luau" },
     root_markers = { ".git" },
-    on_attach = function()
+    on_init = function()
         local cwd = vim.fn.getcwd()
 
         local project = vim.fs.find(function(name)
@@ -23,29 +27,26 @@ return {
                 end
             end)
         end
-    end,
-    cmd = function(dispatchers)
-        local luau_directory = vim.fs.joinpath(vim.fn.stdpath("data"), "luau")
-        local definitions = vim.fs.joinpath(luau_directory, "types.d.luau")
-        local docs = vim.fs.joinpath(luau_directory, "docs.json")
-        local executable = (vim.fn.has("win32") == 1) and "luau-lsp.cmd" or "luau-lsp"
 
-        return vim.lsp.rpc.start({
-            executable,
-            "lsp",
-            "--definitions=" .. definitions,
-            "--docs=" .. docs,
-            "--no-flags-enabled",
-        }, dispatchers)
+        if not vim.uv.fs_stat(luau_directory) then
+            vim.uv.fs_mkdir(luau_directory, tonumber("755", 8))
+        end
+
+        local download = {
+            ["types.d.luau"] = "https://luau-lsp.pages.dev/type-definitions/globalTypes.PluginSecurity.d.luau",
+            ["docs.json"] = "https://luau-lsp.pages.dev/api-docs/en-us.json",
+        }
+
+        for name, url in pairs(download) do
+            local path = vim.fs.joinpath(luau_directory, name)
+            vim.system({ "curl", "-fLo", path, "-z", path, url })
+        end
     end,
-    settings = {
-        ["luau-lsp"] = {
-            completion = {
-                imports = {
-                    enabled = true,
-                    stringRequires = { enabled = true },
-                },
-            },
+    cmd = { "luau-lsp", "lsp", "--definitions", definitions, "--docs", docs },
+    init_options = {
+        fflags = {
+            LuauExplicitTypeExpressionInstantiation = "true",
+            LuauSolverV2 = "true",
         },
     },
 }
