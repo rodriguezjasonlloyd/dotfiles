@@ -15,6 +15,9 @@ bashrc = "~/.bashrc"
 zshenv = "~/.zshenv"
 zshrc = "~/.zshrc"
 
+[btop.files]
+btop = "~/.config/btop"
+
 [fastfetch.files]
 "fastfetch.jsonc" = "~/.config/fastfetch/config.jsonc"
 
