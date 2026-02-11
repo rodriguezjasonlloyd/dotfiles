@@ -64,6 +64,10 @@ window-rule {
 prefer-no-csd
 screenshot-path "~/Pictures/screenshots/screenshot-%Y%m%d-%H%M%S.png"
 
+recent-windows {
+    off
+}
+
 animations {}
 
 binds {
