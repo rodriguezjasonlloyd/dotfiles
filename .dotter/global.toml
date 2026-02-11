@@ -21,8 +21,6 @@ zshrc = "~/.zshrc"
 [yazi.files]
 yazi = "~/.config/yazi"
 
-[nvim.files]
-nvim = "~/.config/nvim"
 
 [tiny.files]
 tiny = "~/.config/tiny"
