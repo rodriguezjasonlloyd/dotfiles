@@ -5,6 +5,12 @@ servers:
     join: ["#backrooms"]
     nicks: [ohirume]
     realname: ohirume
+  - addr: irc.oftc.net
+    port: 6697
+    tls: true
+    join: ["#chimera-linux"]
+    nicks: [ohirume]
+    realname: ohirume
 
 defaults:
   nicks: [ohirume]
