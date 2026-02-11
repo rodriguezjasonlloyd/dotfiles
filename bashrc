@@ -2,6 +2,7 @@
 
 alias ls='eza --icons -F -H --group-directories-first --git -1'
 alias ll='eza --icons -F -H --group-directories-first --git -1 -alF'
+alias hx=helix
 
 eval "$(starship init bash)"
 eval "$(zoxide init --cmd cd bash)"

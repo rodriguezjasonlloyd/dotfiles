@@ -21,6 +21,8 @@ zshrc = "~/.zshrc"
 [yazi.files]
 yazi = "~/.config/yazi"
 
+[helix.files]
+helix = "~/.config/helix"
 
 [tiny.files]
 tiny = "~/.config/tiny"

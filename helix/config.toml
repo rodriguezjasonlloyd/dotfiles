@@ -1,0 +1,64 @@
+theme = "kanagawa"
+
+[editor]
+color-modes = true
+completion-timeout = 0
+completion-trigger-len = 0
+end-of-line-diagnostics = "hint"
+line-number = "relative"
+mouse = false
+trim-final-newlines = true
+trim-trailing-whitespace = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.statusline]
+left = [
+  "mode",
+  "spacer",
+  "version-control",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
+  "diagnostics"
+]
+right = [
+  "spinner",
+  "file-type",
+  "selections",
+  "register",
+  "position",
+  "position-percentage"
+]
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+
+[keys.normal]
+C-g = [
+  ":new",
+  ":insert-output lazygit",
+  ":buffer-close!",
+  ":redraw",
+  ":reload-all"
+]
+"\\" = [
+  ":new",
+  ":insert-output yazi",
+  ":buffer-close!",
+  ":redraw",
+  ":reload-all"
+]

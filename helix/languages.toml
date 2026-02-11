@@ -1,0 +1,38 @@
+[language-server.efm-pyrefly]
+command = "efm-langserver"
+
+[[language-server.efm-pyrefly.config.languages.python]]
+lintCommand = "uv run pyrefly check --output-format min-text --summary=none"
+lintFormats = [
+  "%tRROR %f:%l:%c-%k: %m",
+  "%tRROR %f:%l:%c: %m",
+  "%tRROR %f:%l-%e:%c: %m",
+  " %tARN %f:%l:%c-%k: %m",
+  " %tARN %f:%l:%c: %m",
+  " %tARN %f:%l-%e:%c: %m",
+  " %tNFO %f:%l:%c-%k: %m",
+  " %tNFO %f:%l:%c: %m",
+  " %tNFO %f:%l-%e:%c: %m",
+]
+lintAfterOpen = true
+
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "toml"
+auto-format = true
+
+[[language]]
+name = "python"
+auto-format = true
+language-servers = [
+  { name = "pyrefly" },
+  { name = "ruff" },
+  { name = "efm-pyrefly", only-features = ["diagnostics"] }
+]
