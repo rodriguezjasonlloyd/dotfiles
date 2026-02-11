@@ -1,9 +1,6 @@
 [niri.files]
 niri = "~/.config/niri"
 
-[waybar.files]
-waybar = "~/.config/waybar"
-
 [wpaperd.files]
 wpaperd = "~/.config/wpaperd"
 
