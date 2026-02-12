@@ -1,19 +1,6 @@
-[niri.files]
-niri = "~/.config/niri"
-
-[foot.files]
-foot = "~/.config/foot"
-
-[starship.files]
-"starship.toml" = "~/.config/starship.toml"
-
 [bash.files]
 bash_profile = "~/.bash_profile"
 bashrc = "~/.bashrc"
-
-[zsh.files]
-zshenv = "~/.zshenv"
-zshrc = "~/.zshrc"
 
 [btop.files]
 btop = "~/.config/btop"
@@ -21,11 +8,24 @@ btop = "~/.config/btop"
 [fastfetch.files]
 "fastfetch.jsonc" = "~/.config/fastfetch/config.jsonc"
 
-[yazi.files]
-yazi = "~/.config/yazi"
+[foot.files]
+foot = "~/.config/foot"
 
 [helix.files]
 helix = "~/.config/helix"
 
+[niri.files]
+niri = "~/.config/niri"
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"
+
 [tiny.files]
 tiny = "~/.config/tiny"
+
+[yazi.files]
+yazi = "~/.config/yazi"
+
+[zsh.files]
+zshenv = "~/.zshenv"
+zshrc = "~/.zshrc"
