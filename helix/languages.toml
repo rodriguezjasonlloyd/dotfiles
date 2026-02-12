@@ -16,6 +16,9 @@ lintFormats = [
 ]
 lintAfterOpen = true
 
+[language-server.vscode-json-language-server]
+command = "vscode-json-language-server"
+
 [language-server.pyrefly]
 command = "pyrefly"
 args = ["lsp"]
