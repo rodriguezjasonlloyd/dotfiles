@@ -1,4 +1,4 @@
 [tools]
-lua-language-server = "latest"
+"npm:vscode-json-languageservice" = "latest"
 "npm:yaml-language-server" = "latest"
 tombi = "latest"
