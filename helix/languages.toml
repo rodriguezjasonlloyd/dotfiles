@@ -1,41 +1,29 @@
-[language-server.efm-pyrefly]
-command = "efm-langserver"
-
-[[language-server.efm-pyrefly.config.languages.python]]
-lintCommand = "uv run pyrefly check --output-format min-text --summary=none"
-lintFormats = [
-  "%tRROR %f:%l:%c-%k: %m",
-  "%tRROR %f:%l:%c: %m",
-  "%tRROR %f:%l-%e:%c: %m",
-  " %tARN %f:%l:%c-%k: %m",
-  " %tARN %f:%l:%c: %m",
-  " %tARN %f:%l-%e:%c: %m",
-  " %tNFO %f:%l:%c-%k: %m",
-  " %tNFO %f:%l:%c: %m",
-  " %tNFO %f:%l-%e:%c: %m",
-]
-lintAfterOpen = true
-
-[language-server.vscode-json-language-server]
-command = "vscode-json-language-server"
-
-[language-server.pyrefly]
-command = "pyrefly"
-args = ["lsp"]
-
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
 
+[language-server.rumdl]
+command = "rumdl"
+args = ["server"]
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
 [[language]]
-name = "toml"
-auto-format = true
+name = "markdown"
+language-servers = ["rumdl"]
+formatter = { command = "rumdl", args = ["check", "--fix", "--stdin"] }
 
 [[language]]
 name = "python"
 auto-format = true
 language-servers = [
-  { name = "pyrefly" },
+  { name = "ty" },
   { name = "ruff" },
-  { name = "efm-pyrefly", only-features = ["diagnostics"] }
 ]
+formatter = { command = "ruff", args = ["check", "--fix"] }
+
+[[language]]
+name = "toml"
+auto-format = true
