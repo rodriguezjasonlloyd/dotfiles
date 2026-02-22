@@ -24,7 +24,6 @@ args = ["server"]
 
 [[language]]
 name = "json"
-auto-format = true
 language-servers = ["vscode-json-language-server", "oxfmt"]
 
 [[language]]
@@ -34,12 +33,10 @@ formatter = { command = "rumdl", args = ["check", "--fix", "--stdin"] }
 
 [[language]]
 name = "python"
-auto-format = true
 language-servers = ["ty", "ruff"]
 
 [[language]]
 name = "toml"
-auto-format = true
 
 [[language]]
 name = "typescript"
