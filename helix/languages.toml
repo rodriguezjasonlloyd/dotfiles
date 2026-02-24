@@ -37,9 +37,11 @@ language-servers = ["ty", "ruff"]
 
 [[language]]
 name = "toml"
+auto-format = true
 
 [[language]]
 name = "typescript"
+auto-format = true
 language-servers = [
   { name = "tsgo", except-features = ["format"] },
   "oxlint",
