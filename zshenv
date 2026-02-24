@@ -1,4 +1,4 @@
-export EDITOR=helix
+export EDITOR=hx
 export HELIX_RUNTIME="$HOME/src/helix/runtime"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.rokit/bin:$PATH"
